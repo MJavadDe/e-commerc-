@@ -35,6 +35,11 @@ const Navbar = () => {
                 login
                 </Button>
             </Link>
+            <Link href="/dashbord">
+                <Button>
+                    dashbord
+                </Button>
+            </Link>
         </div>
     );
 };
