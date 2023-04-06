@@ -1,3 +1,4 @@
+import Errore404 from '@/Components/Error404/Errore404';
 import Link from 'next/link';
 import React from 'react';
 
@@ -8,6 +9,7 @@ const AboutUs = () => {
             <Link href="/">
                 back to home     
             </Link>
+            
         </div>
     );
 };

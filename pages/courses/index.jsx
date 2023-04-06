@@ -8,6 +8,7 @@ const Courses = () => {
             <Link href="/">
                 <div>back to home</div>
             </Link>
+            
         </div>
     );
 };
