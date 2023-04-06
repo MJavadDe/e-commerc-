@@ -7,6 +7,9 @@ module.exports = {
 
   ],
   theme: {
+    colors:{
+      
+    },
     extend: {},
   },
   plugins: [],
