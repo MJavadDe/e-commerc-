@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link href="/connect">تماس با ما</Link>
         <Link href="/aboutUs">درباره ما</Link>
       </div>
-      <div className="grid grid-flow-col gap-2 items-center">
+      <div className="grid grid-flow-col gap-2 bg- items-center">
         <Link href="/shopcart">
           <Button
             className={
