@@ -8,7 +8,6 @@ const Blog = () => {
       <h1>blog section is here</h1>
       <Link href="/">back to home</Link>
     </Layout>
-  );
-};
+  )};
 
 export default Blog;
