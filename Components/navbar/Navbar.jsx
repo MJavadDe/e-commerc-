@@ -7,9 +7,9 @@ import "public/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#F3FCF8] top-[30px] flex justify-between px-4 w-full rounded-md">
-      <div className="grid grid-flow-col gap-4 items-center">
-        <Link href="/">
+    <div className="bg-[#F3FCF8] grid grid-flow-col justify-between px-4 w-[90.92%] rounded-md">
+      <div className="grid grid-flow-col gap-3 items-center">
+        <Link href="/courses">
           <Button children={<img src="logo.png"></img>} />
         </Link>
         <Link href="/">خانه</Link>

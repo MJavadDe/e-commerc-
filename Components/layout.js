@@ -6,14 +6,19 @@ const Layout = ({ title, children }) => {
     <>
       <Head>
         <title>{`${title} - online course`}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400&family=Vazirmatn:wght@100;300;400;700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400&family=Vazirmatn:wght@100;300;400;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <Navbar />
+      <header className="w-screen">
+        <Navbar />
+      </header>
       <main>{children}</main>
-      <footer>
-        <Footer/>
+      <footer className="w-screen">
+        <Footer />
       </footer>
     </>
   );
