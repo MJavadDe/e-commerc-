@@ -1,3 +1,4 @@
+import Footer from "./footer&components/Footer";
 import Navbar from "./navbar/Navbar";
 import Head from "next/head";
 const Layout = ({ title, children }) => {
@@ -12,7 +13,7 @@ const Layout = ({ title, children }) => {
       <Navbar />
       <main>{children}</main>
       <footer>
-       footer 
+        <Footer/>
       </footer>
     </>
   );
