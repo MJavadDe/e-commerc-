@@ -7,11 +7,12 @@ import "public/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#F3FCF8] top-[30px] absolute grid grid-flow-col justify-between px-4 w-[90.92%] rounded-md">
-      <div className="grid grid-flow-col gap-3 items-center">
-        <Link href="/courses">
+    <div className="bg-[#F3FCF8] top-[30px] absolute flex justify-between px-4 w-full rounded-md">
+      <div className="grid grid-flow-col gap-4 items-center">
+        <Link href="/">
           <Button children={<img src="logo.png"></img>} />
         </Link>
+        <Link href="/">خانه</Link>
         <Link href="/courses">دوره ها</Link>
         <Link href="/blog">بلاگ</Link>
         <Link href="/connect">تماس با ما</Link>
