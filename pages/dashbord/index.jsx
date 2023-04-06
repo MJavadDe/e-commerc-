@@ -1,10 +1,11 @@
+import Layout from '@/Components/layout';
 import { Button } from 'antd';
 import Link from 'next/link';
 import React from 'react';
 
 const Dashbord = () => {
     return (
-        <div>
+        <Layout title="Dashboard">
             here will be dashbord
             <Link href="dashbord/MyCourses">
                 <Button>
@@ -26,7 +27,7 @@ const Dashbord = () => {
                     favorite courses
                 </Button>   
             </Link>
-        </div>
+        </Layout>
     );
 };
 
