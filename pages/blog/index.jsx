@@ -1,3 +1,4 @@
+import Button from '@/Commons/buttons/Button';
 import Link from 'next/link';
 import React from 'react';
 
@@ -8,6 +9,9 @@ const Blog = () => {
             <Link href='/'>
                 back to home
             </Link>
+            <Button className={'bg-slate-400 rounded-md px-3 py-1'} onClick={()=>{alert('ok')}}>
+                test btn
+            </Button>
         </div>
     );
 };
