@@ -8,10 +8,11 @@ module.exports = {
 
   ],
   theme: {
-    colors:{
-      
+    extend: {
+      fontFamily :{
+        vazir : "Vazirmatn"
+      }
     },
-    extend: {},
   },
   plugins: [],
 }
