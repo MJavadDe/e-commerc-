@@ -7,7 +7,7 @@ import "public/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#F3FCF8] top-[30px] absolute flex justify-between px-4 w-full rounded-md">
+    <div className="bg-[#F3FCF8] top-[30px] flex justify-between px-4 w-full rounded-md">
       <div className="grid grid-flow-col gap-4 items-center">
         <Link href="/">
           <Button children={<img src="logo.png"></img>} />
