@@ -1,10 +1,11 @@
+import Layout from '@/Components/layout';
 import { Button } from 'antd';
 import Link from 'next/link';
 import React from 'react';
 
 const ShopCart = () => {
     return (
-        <div>
+        <Layout title="Shop">
             <h1>this is shop cart</h1>
             <Link href="shopcart/purchaseDetail">
                 <Button>
@@ -19,7 +20,7 @@ const ShopCart = () => {
             <Link href="/">
                 back to home 
             </Link>
-        </div>
+        </Layout>
     );
 };
 
