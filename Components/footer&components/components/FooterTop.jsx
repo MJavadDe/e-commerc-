@@ -1,10 +1,11 @@
 import React from 'react';
-
+import style from './Footer.module.css'
 import FooterLinks from './FooterLinks';
 import NamadComponent from './NamadComponent';
+
 const FooterTop = () => {
     return (
-        <div className='relative w-full flex justify-center items-center p-10 rounded-md'>
+        <div className= {`relative w-full flex justify-center items-center p-10 rounded-md`} >
             <div className='w-[87.85%] flex gap-40'>
                 <FooterLinks content= {{title: "دسترسی",headOne:"دوره ها",headTwo:"معرفی مدرسین",headThree:"بلاگ"}}/>
                 <FooterLinks content= {{title: "متداول",headOne:"پرسش و پاسخ",headTwo:" درخواست مشاوره ",headThree:"ورود"}}/>
