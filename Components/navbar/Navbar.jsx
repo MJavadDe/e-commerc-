@@ -12,6 +12,7 @@ const Navbar = () => {
         <Link href="/courses">
           <Button children={<img src="logo.png"></img>} />
         </Link>
+        <Link href="/">خانه</Link>
         <Link href="/courses">دوره ها</Link>
         <Link href="/blog">بلاگ</Link>
         <Link href="/connect">تماس با ما</Link>
