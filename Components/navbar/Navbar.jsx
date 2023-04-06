@@ -17,15 +17,23 @@ const Navbar = () => {
         <Link href="/connect">تماس با ما</Link>
         <Link href="/aboutUs">درباره ما</Link>
       </div>
-      <div className="grid grid-flow-col gap-3 items-center">
+      <div className="grid grid-flow-col gap-2 items-center">
         <Link href="/shopcart">
-          <Button className={"bg-[#198643] rounded-full p-1"}>
+          <Button
+            className={
+              "bg-[#198643] rounded-full w-[40px] h-[40px] grid justify-center items-center"
+            }
+          >
             <img src="shopping-bag.png"></img>
           </Button>
         </Link>
         <Link href="/auth"></Link>
         <Link href="/dashbord">
-          <Button className={"bg-[#198643] rounded-full p-1"}>
+          <Button
+            className={
+              "bg-[#198643] rounded-full w-[40px] h-[40px] grid justify-center items-center"
+            }
+          >
             <img src="user.png"></img>
           </Button>
         </Link>
