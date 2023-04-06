@@ -10,7 +10,9 @@ module.exports = {
     colors: {
       primary: "#3C6E71",
       secondary: "#198643",
-      // : "#F3FCF8",
+      primarybg: "#F3FCF8",
+      secondarybg: "#E1F7ED",
+      primarybtn: "#82D8B9",
     },
     extend: {
       fontFamily: {
