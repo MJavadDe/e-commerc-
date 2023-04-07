@@ -6,7 +6,7 @@ const FooterLinks = (props) => {
 console.log(style);
     return (
         <div className='flex flex-col gap-2 basis-2/12'>
-            <SpecialHead className={`${style.bborder} top-0 text-[#61CE70] text-[22px] w-fit py-1`} title={props.content.title}/>
+            <SpecialHead className={`${style.bborder} top-0 text-[#61CE70] text-[22px] py-1`} title={props.content.title}/>
             <p>
                 <Link href={"/"}>{props.content.headOne}</Link>
             </p>
