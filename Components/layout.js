@@ -17,7 +17,7 @@ const Layout = ({ title, children }) => {
         <Navbar />
       </header>
       <main>{children}</main>
-      <footer className="w-screen">
+      <footer className="w-screen mx-auto">
         <Footer />
       </footer>
     </>
