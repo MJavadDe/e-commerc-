@@ -5,7 +5,7 @@ import NamadComponent from './NamadComponent';
 
 const FooterTop = () => {
     return (
-        <div className= {`relative w-full flex  items-center p-10 rounded-md`} >
+        <div className= {`relative  flex  items-center p-10 rounded-md`} >
             <div className='w-full flex gap-40 justify-around'>
                 <FooterLinks content= {{title: "دسترسی",headOne:"دوره ها",headTwo:"معرفی مدرسین",headThree:"بلاگ"}}/>
                 <FooterLinks content= {{title: "متداول",headOne:"پرسش و پاسخ",headTwo:" درخواست مشاوره ",headThree:"ورود"}}/>
