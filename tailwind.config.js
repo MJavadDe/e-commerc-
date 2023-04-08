@@ -13,6 +13,7 @@ module.exports = {
       "primary-100": "#E1F7ED",
       "secondary-100": "#F3FCF8",
       "secondary-300": "#82D8B9",
+      "gray": "#999999",
     },
     extend: {
       fontFamily: {
