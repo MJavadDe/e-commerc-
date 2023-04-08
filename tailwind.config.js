@@ -14,6 +14,8 @@ module.exports = {
       "secondary-100": "#F3FCF8",
       "secondary-300": "#82D8B9",
       "gray": "#999999",
+      'white': "#fff"
+      
     },
     extend: {
       fontFamily: {
