@@ -13,13 +13,15 @@ const Layout = ({ title, children }) => {
           rel="stylesheet"
         />
       </Head>
-      <header className="w-screen">
-        <Navbar />
-      </header>
-      <main>{children}</main>
-      <footer className="w-screen mx-auto">
-        <Footer />
-      </footer>
+      <div className="min-h-screen flex flex-col justify-between">
+        <header className="w-screen">
+          <Navbar />
+        </header>
+        <main>{children}</main>
+        <footer className="w-screen mx-auto">
+          <Footer />
+        </footer>
+      </div>
     </>
   );
 };
