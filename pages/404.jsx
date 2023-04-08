@@ -4,9 +4,7 @@ import Layout from '../Components/layout'
 
 function Error(props) {
     return (
-        <Layout title="Error 404">
             <Errore404 />
-        </Layout>
         );
 }
 
