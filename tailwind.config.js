@@ -12,7 +12,6 @@ module.exports = {
       fontFamily: {
         vazir: "Vazirmatn",
       },
-      
       colors: {
         "primary":{
           "light" : "#E1F7ED",
