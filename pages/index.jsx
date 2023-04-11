@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <Layout title="Home page">
       {/* <Searchbox placeholder={"جستجوی دوره های مختلف"}></Searchbox> */}
-      <PriceFormat price={500000} className='text-secondary-default' />
       <CardList></CardList>
     </Layout>
   );
