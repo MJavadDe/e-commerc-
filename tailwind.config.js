@@ -7,24 +7,26 @@ module.exports = {
     "./Commons/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    
     extend: {
       fontFamily: {
         vazir: "Vazirmatn",
       },
       colors: {
-        "primary":{
-          "light" : "#E1F7ED",
-          default : "#3C6E71",
+        primary: {
+          light: "#E1F7ED",
+          default: "#3C6E71",
         },
-        "secondary": {
-          "very-light" : "#F3FCF8",
-          "light" : "#82D8B9",
-          default : "#198643",
+        secondary: {
+          "very-light": "#F3FCF8",
+          light: "#82D8B9",
+          default: "#198643",
         },
-        "gray": "#999999",
-        'white': "#fff"
-        
+        gray: "#999999",
+        white: "#fff",
+      },
+      spacing: {
+        '8': "2rem",
+        "15": "3.75rem"
       },
     },
   },

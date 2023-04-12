@@ -13,12 +13,12 @@ const Layout = ({ title, children }) => {
           rel="stylesheet"
         />
       </Head>
-      <div className="min-h-screen flex flex-col justify-between">
-        <header className="w-screen">
+      <div className="min-h-screen flex flex-col justify-between px-15 py-5">
+        <header className="w-full">
           <Navbar />
         </header>
-        <main>{children}</main>
-        <footer className="w-screen mx-auto">
+        <main className="my-14">{children}</main>
+        <footer className="w-full">
           <Footer />
         </footer>
       </div>

@@ -1,12 +1,13 @@
 import React from "react";
 
 function PriceFormat({ price,className }) {
+  const num=parseInt(price)
   return (
     <div className={`font-vazir text-secondary-default ${className}`}>
-        {(price).toLocaleString('fa-IR')}
-        <span> تومان</span>
+      {num.toLocaleString("fa-IR")}
+      <span> تومان</span>
     </div>
-  )
+  );
     
  
 }
