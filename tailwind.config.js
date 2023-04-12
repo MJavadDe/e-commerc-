@@ -21,12 +21,15 @@ module.exports = {
           light: "#82D8B9",
           DEFAULT: "#198643",
         },
-        gray: "#999999",
+        gray: {
+          default: "#999999",
+          dark: "#707070",
+        },
         white: "#fff",
       },
       spacing: {
-        '8': "2rem",
-        "15": "3.75rem"
+        8: "2rem",
+        15: "3.75rem",
       },
     },
   },
