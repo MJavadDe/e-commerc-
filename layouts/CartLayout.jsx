@@ -5,21 +5,21 @@ import PaymentsOutlinedIcon from "@mui/icons-material/PaymentsOutlined";
 function CartLayout({ children }) {
   return (
     <>
-      <header>
-        <div className="flex bg-primary-dark text-white rounded-lg px-12 py-5 font-vazir items-center justify-between">
-          <div>
+      <header className="px-4 py-5 my-8 bg-primary-light rounded-lg">
+        <div className="flex bg-primary-dark text-white rounded-lg px-12 py-5 font-vazir items-center justify-between font-light text-lg">
+          <div className="text-white">
             <ShoppingCartOutlinedIcon />
-            <span className="text-white px-2">سبد خرید</span>
+            <span className="px-2">سبد خرید</span>
           </div>
-          <div className="basis-1/6 border-dashed border-t-2"></div>
-          <div className="text-gray border-gray">
+          <div className="basis-2/6 border-dashed border-t-2 border-gray-light"></div>
+          <div className="text-gray-light ">
             <TextSnippetOutlinedIcon />
-            <span className="text-white px-2">جزئیات پرداخت</span>
+            <span className=" px-2">جزئیات پرداخت</span>
           </div>
-          <div className="basis-2/6 border-dashed border-t-2 text-gray border-gray"></div>
-          <div className="text-gray border-gray">
+          <div className="basis-2/6 border-dashed border-t-2  border-gray-light"></div>
+          <div className="text-gray-light">
             <PaymentsOutlinedIcon />
-            <span className="text-white px-2">اتمام فرآیند خرید</span>
+            <span className="px-2">اتمام فرآیند خرید</span>
           </div>
         </div>
       </header>
