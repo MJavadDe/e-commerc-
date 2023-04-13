@@ -6,7 +6,7 @@ function CartLayout({ children }) {
   return (
     <>
       <header className="px-4 py-5 my-8 bg-primary-light rounded-lg">
-        <div className="flex bg-primary-dark text-white rounded-lg px-12 py-5 font-vazir items-center justify-between font-light text-lg">
+        <div className="flex gap-5 text-center bg-primary-dark text-white rounded-lg px-12 py-5 font-vazir items-center justify-between font-light text-lg">
           <div className="text-white">
             <ShoppingCartOutlinedIcon />
             <span className="px-2">سبد خرید</span>
