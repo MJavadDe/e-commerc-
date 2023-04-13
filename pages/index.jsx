@@ -1,6 +1,5 @@
 import Layout from '@/Components/layout';
-import Navbar from '@/Components/navbar/Navbar';
-import Searchbox from '@/Components/searchbox/searchbox';
+
 import React from 'react';
 import CardList from "@/Components/payDetail cardList/CardList"
 
