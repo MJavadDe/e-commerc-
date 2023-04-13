@@ -16,6 +16,7 @@ const Home = () => {
       {/* <Searchbox placeholder={"جستجوی دوره های مختلف"}></Searchbox> */}
 =======
           <Searchbox placeholder={"جستجوی دوره های مختلف"}></Searchbox>
+          <CourseIcons/>
 >>>>>>> Stashed changes
     </Layout>
   );
