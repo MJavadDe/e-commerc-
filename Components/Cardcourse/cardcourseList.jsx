@@ -62,10 +62,10 @@ const CardcourseList = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-12 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
       <FilterCourseCard />
       {data.map((item, index) => (
-        <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">
+        <div>
           <Cardcourse key={index} data={item} />
         </div>
       ))}

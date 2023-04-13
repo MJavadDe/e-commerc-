@@ -14,7 +14,7 @@ const Layout = ({ title, children }) => {
           rel="stylesheet"
         />
       </Head>
-      <div className="min-h-screen flex flex-col justify-between px-15 py-5">
+      <div className="min-h-screen flex flex-col justify-between md:px-15 px-5 py-5">
         <header className="w-full">
           <Navbar />
         </header>

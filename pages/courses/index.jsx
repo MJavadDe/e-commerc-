@@ -14,7 +14,7 @@ const Courses = () => {
           <div className="lg:w-[30rem] md:w-[full]">
             <Searchbox
               className="text-secondary-light rounded-md"
-              placeholder="جستجو دوره های مختلف ..."
+              placeholder="جستجوی دوره های مختلف"
             />
           </div>
           <div className="flex items-center">
