@@ -4,7 +4,7 @@ import FooterTop from "./components/FooterTop";
 
 const Footer = () => {
   return (
-    <div className="mx-auto rounded-md  flex flex-col  text-[#F2FCF8] font-vazir bg-[#3C6E71] ">
+    <div className="mx-auto rounded-md  flex flex-col  text-white font-vazir bg-primary ">
       <FooterTop />
       <FooterBottom />
     </div>
