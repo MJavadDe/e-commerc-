@@ -7,6 +7,12 @@ module.exports = {
     "./Commons/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}"
   ],
+  safelist: [
+    "ant-checkbox-inner",
+    "ant-checkbox",
+    "ant-checkbox-wrapper",
+    "ant-checkbox-checked",
+  ],
   theme: {
     extend: {
       fontFamily: {

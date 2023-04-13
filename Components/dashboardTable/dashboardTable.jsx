@@ -61,19 +61,19 @@ const DashboardTable = () => {
             <div className="w-[10%] flex justify-center">
               <Image src={item.image} width={50} height={50} />
             </div>
-            <span className="w-[12%] overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="w-[12%]  truncate">
               {item.name}
             </span>
-            <span className="w-[12%] overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="w-[12%]  truncate">
               {item.teacher}
             </span>
-            <span className="w-[8%] overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="w-[8%]  truncate">
               {item.termName}
             </span>
-            <span className="w-[10%] overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="w-[10%]  truncate">
               {item.date}
             </span>
-            <span className="w-[12%] overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="w-[12%]  truncate">
               <PriceFormat price={item.price}></PriceFormat>
             </span>
           </div>
