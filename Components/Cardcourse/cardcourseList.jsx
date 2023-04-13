@@ -60,65 +60,9 @@ const CardcourseList = () => {
       time: "7:50:00",
       price: "500000",
     },
-    {
-      title: "دوره ریکت",
-      img: "/06.png",
-      instructor: "حسامی",
-      time: "7:50:00",
-      price: "500000",
-    },
-    {
-      title: "دوره ریکت",
-      img: "/06.png",
-      instructor: "حسامی",
-      time: "7:50:00",
-      price: "500000",
-    },
-    {
-      title: "دوره ریکت",
-      img: "/06.png",
-      instructor: "حسامی",
-      time: "7:50:00",
-      price: "500000",
-    },
-    {
-      title: "دوره ریکت",
-      img: "/06.png",
-      instructor: "حسامی",
-      time: "7:50:00",
-      price: "500000",
-    },
-    {
-      title: "دوره ریکت",
-      img: "/06.png",
-      instructor: "حسامی",
-      time: "7:50:00",
-      price: "500000",
-    },
-    {
-      title: "دوره ریکت",
-      img: "/06.png",
-      instructor: "حسامی",
-      time: "7:50:00",
-      price: "500000",
-    },
-    {
-      title: "دوره ریکت",
-      img: "/06.png",
-      instructor: "حسامی",
-      time: "7:50:00",
-      price: "500000",
-    },
-    {
-      title: "دوره ریکت",
-      img: "/06.png",
-      instructor: "حسامی",
-      time: "7:50:00",
-      price: "500000",
-    },
   ];
   return (
-    <div className="grid grid-cols-12 gap-8 mx-auto">
+    <div className="grid grid-cols-12 gap-8">
       <FilterCourseCard />
       {data.map((item, index) => (
         <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">

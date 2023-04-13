@@ -4,9 +4,9 @@ import Input from "@/Commons/inputs/Input";
 import "public/search.png";
 export default function Searchbox({ placeholder, className, onClick }) {
   return (
-    <div className="flex justify-between rounded bg-white shadow-md px-[20px] w-[510px]">
+    <div className="flex justify-between rounded bg-white shadow-md px-[20px] w-full">
       <Input
-        className={`placeholder-green-500 w-full shadow-none px-0 ${className}`}
+        className={`placeholder:text-primary-dark shadow-none px-0 w-full`}
         placeholder={placeholder}
       />
       <div className="flex items-center cursor-pointer" onClick={onClick}>
