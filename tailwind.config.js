@@ -6,6 +6,12 @@ module.exports = {
     "./Components/**/*.{js,ts,jsx,tsx}",
     "./Commons/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    "ant-checkbox-inner",
+    "ant-checkbox",
+    "ant-checkbox-wrapper",
+    "ant-checkbox-checked",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -22,7 +28,7 @@ module.exports = {
           DEFAULT: "#198643",
         },
         gray: {
-          default: "#999999",
+          DEFAULT: "#999999",
           dark: "#707070",
         },
         white: "#fff",

@@ -9,7 +9,7 @@ body {
 }
 
 
-@layer components {
+@layer base {
   .ant-checkbox-inner {
     @apply rounded border border-secondary !important;
   }
