@@ -5,6 +5,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./Components/**/*.{js,ts,jsx,tsx}",
     "./Commons/**/*.{js,ts,jsx,tsx}",
+    "./layouts/**/*.{js,ts,jsx,tsx}"
   ],
   safelist: [
     "ant-checkbox-inner",
@@ -20,6 +21,7 @@ module.exports = {
       colors: {
         primary: {
           light: "#E1F7ED",
+          dark:"#46A194",
           DEFAULT: "#3C6E71",
         },
         secondary: {
