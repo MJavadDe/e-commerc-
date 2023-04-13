@@ -1,3 +1,4 @@
+import HeadBox from "@/Components/headBox/HeadBox";
 import CardcourseList from "@/Components/Cardcourse/cardcourseList";
 import Layout from "@/Components/layout";
 import React from "react";
@@ -5,6 +6,7 @@ import React from "react";
 const Home = () => {
   return (
     <Layout title="Home page">
+
     </Layout>
   );
 };
