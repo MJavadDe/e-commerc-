@@ -6,9 +6,6 @@ const NamadComponent = (props) => {
         <div className=' basis-6/12 w-1/3'>
             <SpecialHead className={`top-0 text-[#61CE70] text-[22px] py-1 `} title={props.content.title}/>
             <div className={`flex gap-7 pt-8 style justify-around w-full relative ${style.gradientbordertop}`}>
-                <div><img src={props.content.src1} className='bg-secondary-100 rounded-md p-1' alt="" /></div>
-                <div><img src={props.content.src2} className='bg-secondary-100 rounded-md p-1' alt="" /></div>
-                <div><img src={props.content.src3} className='bg-secondary-100 rounded-md p-1' alt="" /></div>
             </div>
         </div>
     );
