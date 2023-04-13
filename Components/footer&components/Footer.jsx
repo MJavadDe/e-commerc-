@@ -1,14 +1,14 @@
-import React from "react";
-import FooterBottom from "./components/FooterBottom";
-import FooterTop from "./components/FooterTop";
+import React from 'react';
+import FooterBottom from './components/FooterBottom';
+import FooterTop from './components/FooterTop';
 
 const Footer = () => {
-  return (
-    <div className="mx-auto rounded-md  flex flex-col  text-white font-vazir bg-primary ">
-      <FooterTop />
-      <FooterBottom />
-    </div>
-  );
+    return (
+        <div className='bg-[#3C6E71] w-full  mx-auto h-fit flex-col rounded-md'>
+            <FooterTop/>
+            <FooterBottom/>
+        </div>
+    );
 };
 
 export default Footer;
