@@ -6,11 +6,3 @@
     border-image: linear-gradient(to right,rgb(5, 95, 5), rgb(40, 228, 23)) 1;
     border-top:2px solid ;
   }
-  .span{
-    width: 15px;
-    @apply md:w-[25px]
-  }
-  .span>img{
-    width: 100%;
-  }
- 

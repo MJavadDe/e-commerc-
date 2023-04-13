@@ -2,9 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    margin: 0;
-    box-sizing: border-box;
-    direction: rtl;
+body {
+  margin: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+
+@layer base {
+  .ant-checkbox-inner {
+    @apply rounded border border-secondary !important;
   }
-  
+
+  .ant-checkbox .ant-checkbox-inner:after {
+    @apply text-secondary bg-transparent border-secondary !important
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    @apply bg-transparent !important
+  }
+
+  .ant-checkbox-wrapper:hover .ant-checkbox:after,.ant-checkbox-wrapper:hover .ant-checkbox-checked:after {
+    @apply rounded border border-secondary border-2 !important;
+  }
+}

@@ -8,17 +8,18 @@ const Layout = ({ title, children }) => {
         <title>{`${title} - online course`}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400&family=Vazirmatn:wght@100;300;400;700&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <div className="min-h-screen flex flex-col justify-between">
-        <header className="w-screen">
+      <div className="min-h-screen flex flex-col justify-between md:px-15 px-5 py-5">
+        <header className="w-full">
           <Navbar />
         </header>
-        <main>{children}</main>
-        <footer className="w-screen mx-auto">
+        <main className="my-14">{children}</main>
+        <footer className="w-full">
           <Footer />
         </footer>
       </div>
