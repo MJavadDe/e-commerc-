@@ -19,7 +19,7 @@ function ListCartItem(props) {
     },
   ];
   return (
-    <div className="flex-col justify-between mx-auto bg-primary-light rounded flex gap-3 p-3">
+    <div className="flex-col justify-between mx-auto bg-primary-light rounded flex gap-3 p-3 font-vazir">
       {listItem.map((item, index) => (
         <CartItem key={`item-index`} data={item} />
       ))}
