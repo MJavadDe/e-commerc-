@@ -5,13 +5,14 @@ import CourseIcons from "@/Components/courseIcons/CourseIcons";
 import Layout from "@/Components/layout";
 import Searchbox from "@/Components/searchbox/searchbox";
 import ServicesCard from "@/Components/servicesCard/ServicesCard";
+import TeacherCarusel from "@/Components/teacherCarusel/TeacherCarusel";
 import Image from "next/image";
 import React from "react";
 
 const Home = () => {
   return (
     <Layout title="Home page">
-      <div className="font-vazir">
+      <div className="flex flex-col gap-5">
         <div className="flex flex-col-reverse md:flex-row justify-between bg-[url('/images/background2.png')] sm:bg-[url('/images/background.png')] h-[28rem] md:h-[25rem] bg-cover">
           <div className="flex flex-col px-8 justify-between">
             <div className="flex flex-col gap-5 pt-10 mb-10 md:mb-0">
@@ -42,6 +43,10 @@ const Home = () => {
         <div className="w-full hidden sm:flex mt-10">
           <CourseIcons />
         </div>
+
+        {/* Teachers Section Start */}
+        <TeacherCarusel />
+        {/* Teachers Section End*/}
       </div>
     </Layout>
   );
