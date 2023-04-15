@@ -1,8 +1,12 @@
 import React from "react";
 import Cardcourse from "./cardcourse";
 import FilterCourseCard from "../filterCourseCard/filterCourseCard";
+import { useRouter } from "next/router";
 
-const CardcourseList = () => {
+
+const CardcourseList = ({router}) => {
+// const router = useRouter()
+//   console.log(router)
   const data = [
     {
       title: "دوره ریکت",
@@ -63,7 +67,7 @@ const CardcourseList = () => {
   ];
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
-      <FilterCourseCard />
+      {router.route === "/courses" && <FilterCourseCard />}
       {data.map((item, index) => (
         <div key={index}>
           <Cardcourse key={index} data={item} />
