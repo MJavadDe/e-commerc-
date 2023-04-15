@@ -43,7 +43,7 @@ const Layout = ({ title, children }) => {
   return (
     <>
       <Head>
-        <title>{`${title} - online course`}</title>
+        <title>online courses</title>
       </Head>
       <div className="min-h-screen flex flex-col justify-between md:px-15 px-5 py-5">
         <header className="w-full">
