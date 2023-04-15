@@ -3,44 +3,41 @@ import { Fragment } from "react";
 import Button from "@/Commons/buttons/Button";
 
 import style from "./CardPaymentList.module.css";
-import PaymentCard from "./PaymentCard";
+import PaymentCard from "../paymentCardList/PaymentCard";
+import PriceFormat from "@/utilitie/priceFormat";
 
-export default function CardPaymentList(prop) {
+export default function CardPaymentList() {
   // const data = prop.paymentCardList
   const data = [
     {
       name: "دوره نکست جی اس مقدماتی از صفر تا صد",
-      price: "90.000",
-      utility: "تومان",
+      price: "80000",
     },
     {
       name: "دوره نکست جی اس مقدماتی از صفر تا صد",
-      price: "90.000",
-      utility: "تومان",
+      price: "90000",
     },
     {
       name: "دوره نکست جی اس مقدماتی از صفر تا صد",
-      price: "90.000",
-      utility: "تومان",
+      price: "90000",
     },
     {
       name: "دوره نکست جی اس مقدماتی از صفر تا صد",
-      price: "90.000",
-      utility: "تومان",
+      price: "90000",
     },
   ];
   return (
-    <div className="w-[415px] rounded-md grid gap-3 p-[21px] border">
+    <div className=" rounded-md grid gap-3 p-[21px] border font-vazir">
       <div
         className={`font-semibold border-primary-default pb-[20px] ${style.borderbuttomdashedcustom}`}
       >
         جزئیات پرداخت
       </div>
       <div className="grid gap-[8px] my-[10px]">
-        {data.map((item) => {
+        {data.map((item , index) => {
           return (
-            <Fragment>
-              <PaymentCard prop={item} />
+            <Fragment key={index}>
+              <PaymentCard item={item} />
             </Fragment>
           );
         })}
@@ -51,8 +48,7 @@ export default function CardPaymentList(prop) {
         <div className="truncate col-span-4 font-semibold">
           مبلغ قابل پرداخت
         </div>
-        <div className="col-span-1 font-semibold">300.000</div>
-        <div className="col-span-1 font-semibold">تومان</div>
+        <div className="col-span-1 font-semibold whitespace-nowrap"><PriceFormat price={300000}/></div>
       </div>
       <Button
         className={
