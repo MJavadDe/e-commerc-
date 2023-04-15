@@ -10,8 +10,8 @@ import ShareIcon from "@mui/icons-material/Share";
 
 function SshareArticle(props) {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="mb-3 text-primary font-bold">اشتراک گذاری</h1>
+    <div className="flex flex-col justify-center items-center mt-16 font-vazir">
+      <h1 className="mb-3 text-blue font-bold">اشتراک گذاری</h1>
       <div className="flex">
         <span className=" m-1 p-1 rounded-full border border-gray flex justify-center items-center w-10 h-10 ">
           <TelegramIcon className="text-gray" />
