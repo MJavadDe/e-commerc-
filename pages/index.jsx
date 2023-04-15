@@ -18,8 +18,8 @@ const Home = () => {
   return (
     <Layout title="Home page">
       <div className="flex flex-col gap-10">
-        <div className="flex flex-col-reverse md:flex-row justify-between bg-[url('/images/background2.png')] sm:bg-[url('/images/background.png')] h-[28rem] md:h-[25rem] bg-cover">
-          <div className="flex flex-col px-8 justify-between">
+        <div className="flex flex-col-reverse md:flex-row justify-between bg-primary-very-light bg-circle h-[28rem] md:h-[25rem] bg-cover">
+          <div className="flex flex-col px-8 justify-between z-10">
             <div className="flex flex-col gap-5 pt-10 mb-10 md:mb-0">
               <h1 className="text-blue text-center text-lg md:text-2xl">
                 آموزش برنامه نویسی، خودآموزی، ورود به بازارکار
@@ -34,7 +34,7 @@ const Home = () => {
             />
             <ServicesCard />
           </div>
-          <div className="self-center mt-5 sm:ml-7">
+          <div className="self-center mt-5 sm:ml-7 z-10">
             <div className=" bg-primary-very-light rounded-full">
               <Image
                 src="/images/part_1.png"
