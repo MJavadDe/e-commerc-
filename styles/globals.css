@@ -10,6 +10,8 @@ body {
 
 
 @layer base {
+  /* checkbox style start */
+
   .ant-checkbox-inner {
     @apply rounded border border-secondary !important;
   }
@@ -22,7 +24,18 @@ body {
     @apply bg-transparent !important
   }
 
-  .ant-checkbox-wrapper:hover .ant-checkbox:after,.ant-checkbox-wrapper:hover .ant-checkbox-checked:after {
+  .ant-checkbox-wrapper:hover .ant-checkbox:after,
+  .ant-checkbox-wrapper:hover .ant-checkbox-checked:after {
     @apply rounded border border-secondary border-2 !important;
   }
+
+  /* checkbox style end */
+
+  /* cart steps color start */
+
+  .active-step {
+    @apply text-white border-white
+  }
+
+  /* cart steps color end */
 }
