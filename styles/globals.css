@@ -11,7 +11,9 @@ body {
 
 @layer components {
   /* checkbox style start */
-
+body{
+  @apply font-vazir
+}
   .ant-checkbox-inner {
     @apply rounded border border-secondary !important;
   }
