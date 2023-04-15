@@ -5,9 +5,9 @@ import React from 'react';
 
 const ConnectWithUs = () => {
     return (
-        <Layout title="Connect use">
+        <>
             <ContactPage />
-        </Layout>
+        </>
     );
 };
 

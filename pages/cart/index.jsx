@@ -25,14 +25,14 @@ function index(props) {
     },
   ];
   return (
-    <Layout title="Cart">
+    <>
       <CartLayout cartStep={cartStep}>
         <div className="flex flex-col lg:flex-row justify-between bg-secondary-very-light rounded-lg gap-8 p-8">
           <ListCartItem className="lg:w-2/3" data={listItem} />
           <CardPaymentList className="lg:w-1/3" data={listItem} />
         </div>
       </CartLayout>
-    </Layout>
+    </>
   );
 }
 

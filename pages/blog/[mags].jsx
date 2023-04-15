@@ -10,10 +10,10 @@ const SingleMag = () => {
   const router = useRouter();
 
   return (
-    <Layout>
+    <>
       <ArticleContent />
       <SshareArticle />
-    </Layout>
+    </>
   );
 };
 

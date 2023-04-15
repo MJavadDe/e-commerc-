@@ -4,10 +4,8 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <Layout title="About">
-      <h1>this is about us</h1>
-      <Link href="/">back to home</Link>
-    </Layout>
+    <>
+    </>
   );
 };
 

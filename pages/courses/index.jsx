@@ -9,9 +9,8 @@ import { useRouter } from "next/router";
 
 const Courses = () => {
   const router = useRouter()
-  console.log(router)
   return (
-    <Layout title="Courses">
+    <>
       <div className=" flex flex-col font-vazir">
         <div className="flex flex-col gap-5 lg:flex-row justify-between md:gap-5 bg-secondary-very-light lg:h-[4.3rem] md:h-[7rem] rounded-xl items-center mb-10 lg:text-base md:text-sm sm:text-sm p-3 md:flex-col sm:flex-col sm:gap-5">
           <div className="lg:w-[30rem] md:w-[full]">
@@ -31,7 +30,7 @@ const Courses = () => {
           <Paginations />
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

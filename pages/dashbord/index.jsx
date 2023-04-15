@@ -6,9 +6,9 @@ import React from 'react';
 
 const Dashbord = () => {
     return (
-        <Layout title="Dashboard">
+        <>
         
-        </Layout>
+        </>
     );
 };
 

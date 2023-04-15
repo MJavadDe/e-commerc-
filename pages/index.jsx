@@ -15,7 +15,7 @@ import HeadBox from "./../Components/headBox/HeadBox";
 const Home = () => {
   const router = useRouter();
   return (
-    <Layout title="Home page">
+    <>
       <div className="flex flex-col gap-10">
         <div className="flex flex-col-reverse md:flex-row justify-between bg-primary-very-light bg-circle h-[28rem] md:h-[25rem] bg-cover">
           <div className="flex flex-col px-8 justify-between z-10">
@@ -78,7 +78,7 @@ const Home = () => {
           <CardcourseList router={router} />
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 
