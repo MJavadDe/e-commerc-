@@ -22,7 +22,7 @@ const Navbar = () => {
         <NavLink children="خانه" url=""/>
         <NavLink children="دوره ها" url="courses"/>
         <NavLink children="بلاگ" url="blog"/>
-        <NavLink children="تماس با ما" url="connect"/>
+        <NavLink children="تماس با ما" url="Contact"/>
         <NavLink children="درباره ما" url="aboutUs"/>
         </div>
       </div>

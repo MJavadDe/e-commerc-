@@ -8,8 +8,9 @@ import Button from '@/Commons/buttons/Button';
 
 function ContactPage(props) {
     return (
-        <div className='flex'>
-            <div id="righPart  ">
+        <div className="bg-primary-very-light rounded-xl bg-circle " >
+           <div className='contactWraper px-48 py-14 flex gap-44 relative z-10 '>
+           <div>
                 <div className='border flex  items-center py-12'>
                     <div className='px-8'>
                     <CallIcon className='text-primary text-3xl'/>
@@ -57,14 +58,15 @@ function ContactPage(props) {
             </div>
 
 
-            <div id="rightPart">
+            <div>
                 <h2>تماس با ما</h2>
                 <Input placeholder = 'نام و نام خانوادگی'></Input>
                 <Input placeholder = 'ایمیل'></Input>
                 <Input placeholder = 'شماره موبایل'></Input>
                 <textarea placeholder='متن  پیام' className='resize-none'></textarea>
                 <Button> ارسال پیام</Button>
-            </div>
+            </div>  
+           </div>
         </div>
     );
 }
