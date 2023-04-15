@@ -6,23 +6,23 @@ const CheckoutCart = () => {
     <div className="font-vazir  bg-primary-light rounded-xl text-gray-dark">
       <div className="w-full p-10 flex flex-col items-center gap-8">
         <h3 className=" self-start mb-10">جزئیات صورت حساب</h3>
-        <div className="flex justify-between w-[95%]">
-          <div className="flex flex-col w-[40%] gap-3">
+        <div className="flex flex-col sm:flex-row gap-5 justify-between w-[95%]">
+          <div className="flex flex-col gap-3 sm:w-[40%]">
             <span>نام</span>
             <Input className={"rounded-xl"} />
           </div>
-          <div className="flex flex-col w-[40%] gap-3">
+          <div className="flex flex-col gap-3 sm:w-[40%]">
             <span>نام خانوادگی</span>
             <Input className={"rounded-xl"} />
           </div>
         </div>
         <div className="flex flex-col w-[95%] gap-3">
           <span>شماره همراه</span>
-          <Input className={"rounded-xl"} />
+          <Input placeholder="...۰۹۱۲۴۵۲" className={"rounded-xl placeholder:text-gray"} />
         </div>
         <div className="flex flex-col w-[95%] gap-3">
           <span>آدرس ایمیل</span>
-          <Input className={"rounded-xl"} />
+          <Input placeholder="cheloi-darabi@gmail.com" className={"rounded-xl placeholder:text-gray"} />
         </div>
       </div>
     </div>
