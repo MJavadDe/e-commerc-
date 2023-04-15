@@ -4,7 +4,7 @@ import FooterTop from './components/FooterTop';
 
 const Footer = () => {
     return (
-        <div className='bg-[#3C6E71] w-full  mx-auto h-fit flex-col rounded-md'>
+        <div className='bg-[#3C6E71] w-full  mx-auto h-fit flex-col rounded-md font-vazir'>
             <FooterTop/>
             <FooterBottom/>
         </div>
