@@ -1,6 +1,7 @@
 import ArticleCard from "@/Components/articleCardList/ArticleCard";
 import ArticleCardList from "@/Components/articleCardList/ArticleCardList";
 import ArticleContent from "@/Components/articleContent/ArticleContent";
+import CourseIcons from "@/Components/courseIcons/CourseIcons";
 import Layout from "@/Components/layout";
 import Searchbox from "@/Components/searchbox/searchbox";
 import ServicesCard from "@/Components/servicesCard/ServicesCard";
@@ -37,6 +38,9 @@ const Home = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="w-full hidden sm:flex mt-10">
+          <CourseIcons />
         </div>
       </div>
     </Layout>
