@@ -30,7 +30,7 @@ const Navbar = () => {
           <NavLink url="" children={<Button children={<Image src="/logo-1.png" width={40} height={40} alt="logo" />} className={""}/>}/>
       </div>
       <div className="flex gap-2 bg- items-center">
-        <Link href="/shopcart" className="hidden md:block">
+        <Link href="/cart" className="hidden md:block">
           <Button
             className={
               "bg-[#198643] rounded-full w-[40px] h-[40px] grid justify-center items-center"
