@@ -1,16 +1,20 @@
-import { useRouter } from 'next/router';
-import React from 'react';
+import ArticleContent from "@/Components/articleContent/ArticleContent";
+import Layout from "@/Components/layout";
+import Paginations from "@/Components/pagination/Pagination";
+import SshareArticle from "@/Components/shareArticleComponent/SshareArticle";
+import { useRouter } from "next/router";
+import React from "react";
+
 
 const SingleMag = () => {
+  const router = useRouter();
 
-    const router =   useRouter()
-
-
-    return (
-        <div>
-            here will be mag number: {router.query.mags}
-        </div>
-    );
+  return (
+    <Layout>
+      <ArticleContent />
+      <SshareArticle />
+    </Layout>
+  );
 };
 
 export default SingleMag;
