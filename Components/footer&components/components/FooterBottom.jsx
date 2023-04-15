@@ -3,7 +3,7 @@ import React from 'react';
 import style from './Footer.module.css'
 const FooterBottom = () => {
     return (
-        <div className='border-t-2 flex items-center justify-around sm:py-5 py-3 text-[#B4CFC3]'>
+        <div className='border-t-2 flex justify-around items-center pt-4 text-[#B4CFC3]'>
             <h1 className='text-[7px] sm:text-sm'>
               برند به عنوان یک نام و علامت تجاری ثبت شده است. کلیه حقوق این وب سایت برای  محفوظ است ©
             </h1>

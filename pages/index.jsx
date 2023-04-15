@@ -6,7 +6,7 @@ import CourseIcons from "@/Components/courseIcons/CourseIcons";
 import Layout from "@/Components/layout";
 import Searchbox from "@/Components/searchbox/searchbox";
 import ServicesCard from "@/Components/servicesCard/ServicesCard";
-import TeacherCarusel from "@/Components/teacherCarusel/TeacherCarusel";
+import TeacherCarusel from "@/Components/teacherCarousel/TeacherCarusel";
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
