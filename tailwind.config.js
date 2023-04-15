@@ -5,7 +5,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./Components/**/*.{js,ts,jsx,tsx}",
     "./Commons/**/*.{js,ts,jsx,tsx}",
-    "./layouts/**/*.{js,ts,jsx,tsx}"
+    "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
     "ant-checkbox-inner",
@@ -15,13 +15,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        landing: "url('/images/background.png')",
+        "responsive-landing": "url('/images/background2.png')"
+      },
       fontFamily: {
         vazir: "Vazirmatn",
       },
       colors: {
         primary: {
+          "very-light": "#EFFBF7",
           light: "#E1F7ED",
-          dark:"#46A194",
+          dark: "#46A194",
           DEFAULT: "#3C6E71",
         },
         secondary: {
@@ -30,10 +35,15 @@ module.exports = {
           DEFAULT: "#198643",
         },
         gray: {
-          light:"#C3C3C3",
+          light: "#C3C3C3",
           DEFAULT: "#999999",
           dark: "#707070",
+          "very-light": "#EDF3F6",
         },
+        blue: {
+          DEFAULT: "#3A4678",
+        },
+
         white: "#fff",
       },
       spacing: {

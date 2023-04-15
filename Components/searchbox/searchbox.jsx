@@ -4,7 +4,7 @@ import Input from "@/Commons/inputs/Input";
 import "public/search.png";
 export default function Searchbox({ placeholder, className, onClick }) {
   return (
-    <div className="flex justify-between rounded bg-white shadow-md px-[20px] w-full">
+    <div className={`flex justify-between rounded-xl bg-white shadow-md px-[20px] w-full ${className}`}>
       <Input
         className={`placeholder:text-primary-dark shadow-none px-0 w-full`}
         placeholder={placeholder}

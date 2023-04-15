@@ -34,33 +34,33 @@ function ServicesCard(props) {
   // );
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="m-4 flex flex-col justify-center items-center">
-        <div className="bg-primary-100 rounded-full p-1">
+    <div className="hidden lg:grid lg:grid-cols-4 text-blue">
+      <div className="m-4 flex flex-col justify-center items-center text-center">
+        <div className="bg-gray-very-light rounded-full p-1">
           <Image src={GraduationCap} alt="" className=" p-2 " width={50} />
         </div>
-        <p>دوره های رایگان</p>
+        <p className="whitespace-nowrap">دوره های رایگان</p>
       </div>
 
-      <div className="m-4 flex flex-col justify-center items-center">
-        <div className="bg-primary-100 rounded-full p-1">
+      <div className="m-4 flex flex-col justify-center items-center text-center">
+        <div className="bg-gray-very-light rounded-full p-1">
           <Image src={Teach} alt="" className=" p-2 " width={50} />
         </div>
-        <p>مدرسین مجرب</p>
+        <p className="whitespace-nowrap">مدرسین مجرب</p>
       </div>
 
-      <div className="m-4 flex flex-col justify-center items-center">
-        <div className="bg-primary-100 rounded-full p-1">
+      <div className="m-4 flex flex-col justify-center items-center text-center">
+        <div className="bg-gray-very-light rounded-full p-1">
           <Image src={Gift} alt="" className=" p-2 " width={50} />
         </div>
-        <p>کدهای تخفیف</p>
+        <p className="whitespace-nowrap">کدهای تخفیف</p>
       </div>
 
-      <div className="m-4 flex flex-col justify-center items-center">
-        <div className="bg-primary-100 rounded-full p-1">
+      <div className="m-4 flex flex-col justify-center items-center text-center">
+        <div className="bg-gray-very-light rounded-full p-1">
           <Image src={SupportSormeyi} alt="" className=" p-2 " width={50} />
         </div>
-        <p>پشتیبانی 24/7</p>
+        <p className="whitespace-nowrap">پشتیبانی 24/7</p>
       </div>
     </div>
   );
