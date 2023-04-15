@@ -1,3 +1,4 @@
+import CardcourseList from "@/Components/Cardcourse/cardcourseList";
 import ArticleCard from "@/Components/articleCardList/ArticleCard";
 import ArticleCardList from "@/Components/articleCardList/ArticleCardList";
 import ArticleContent from "@/Components/articleContent/ArticleContent";
@@ -8,11 +9,15 @@ import ServicesCard from "@/Components/servicesCard/ServicesCard";
 import TeacherCarusel from "@/Components/teacherCarusel/TeacherCarusel";
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/router";
+import HeadBox from './../Components/headBox/HeadBox';
+
 
 const Home = () => {
+  const router = useRouter()
   return (
     <Layout title="Home page">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-10">
         <div className="flex flex-col-reverse md:flex-row justify-between bg-[url('/images/background2.png')] sm:bg-[url('/images/background.png')] h-[28rem] md:h-[25rem] bg-cover">
           <div className="flex flex-col px-8 justify-between">
             <div className="flex flex-col gap-5 pt-10 mb-10 md:mb-0">
@@ -40,13 +45,26 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-full hidden sm:flex mt-10">
+        <div className="w-full hidden sm:flex">
           <CourseIcons />
         </div>
+<div className="flex flex-col">
+<HeadBox url="/courses" title="آخرین دوره های مجموعه" buttonTitle="مشاهده همه دوره ها" />
+  <CardcourseList router={router} />
+</div>
+<div className="flex flex-col">
+  <HeadBox url="/blog" title="آخرین مقالات سایت" buttonTitle="مشاهده همه مقالات"/>
+<ArticleCardList/>
+</div>
 
         {/* Teachers Section Start */}
         <TeacherCarusel />
         {/* Teachers Section End*/}
+        
+        <div className="flex flex-col">
+<HeadBox url="/courses" title="دوره های محبوب" buttonTitle="مشاهده همه دوره ها" />
+  <CardcourseList router={router} />
+</div>
       </div>
     </Layout>
   );

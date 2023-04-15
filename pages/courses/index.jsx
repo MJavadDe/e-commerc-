@@ -5,8 +5,11 @@ import Link from "next/link";
 import React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Paginations from "./../../Components/pagination/Pagination";
+import { useRouter } from "next/router";
 
 const Courses = () => {
+  const router = useRouter()
+  console.log(router)
   return (
     <Layout title="Courses">
       <div className=" flex flex-col font-vazir">
@@ -23,7 +26,7 @@ const Courses = () => {
           </div>
         </div>
 
-        <CardcourseList />
+        <CardcourseList router={router} />
         <div className="mt-5">
           <Paginations />
         </div>

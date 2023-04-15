@@ -8,22 +8,21 @@ body {
   direction: rtl;
 }
 
-
 @layer components {
   /* checkbox style start */
-body{
-  @apply font-vazir
-}
+  body {
+    @apply font-vazir;
+  }
   .ant-checkbox-inner {
     @apply rounded border border-secondary !important;
   }
 
   .ant-checkbox .ant-checkbox-inner:after {
-    @apply text-secondary bg-transparent border-secondary !important
+    @apply text-secondary bg-transparent border-secondary !important;
   }
 
   .ant-checkbox-checked .ant-checkbox-inner {
-    @apply bg-transparent !important
+    @apply bg-transparent !important;
   }
 
   .ant-checkbox-wrapper:hover .ant-checkbox:after,
@@ -36,17 +35,15 @@ body{
   /* cart steps color start */
 
   .active-step {
-    @apply text-white border-white
+    @apply text-white border-white;
   }
 
   /* cart steps color end */
 
-
   /* circle bg style start*/
   .bg-circle {
-    @apply before:content-[''] before:w-[500px] lg:before:w-[900px] before:h-[500px] lg:before:h-[900px] before:absolute before:left-[-10%] before:top-[-18%] before:bg-primary-light before:z-0  relative overflow-hidden before:rounded-full 
+    @apply before:content-[''] before:w-[500px] lg:before:w-[900px] before:h-[500px] lg:before:h-[900px] before:absolute before:left-[-10%] before:top-[-18%] before:bg-primary-light before:z-0  relative overflow-hidden before:rounded-full;
   }
 
   /* circle bg style end*/
-
 }
