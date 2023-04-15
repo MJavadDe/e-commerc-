@@ -15,9 +15,9 @@ const Navbar = () => {
     <div className="mx-auto bg-primary-light flex font-vazir justify-between px-4 py-[15px] rounded-md">
       <div>
         <div className="md:hidden">
-          {<MenuIcon/>}
+          {<MenuIcon className=" text-secondary text-4xl cursor-pointer"/>}
         </div>
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-14 text-blue">
         <NavLink url="" children={<Button children={<Image src="/logo-1.png" width={40} height={40} alt="logo" />} className={""}/>}/>
         <NavLink children="خانه" url=""/>
         <NavLink children="دوره ها" url="courses"/>
