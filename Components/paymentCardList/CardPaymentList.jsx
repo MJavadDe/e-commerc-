@@ -1,58 +1,36 @@
 import React from "react";
-import { Fragment } from "react";
 import Button from "@/Commons/buttons/Button";
 
-import style from "./CardPaymentList.module.css";
 import PaymentCard from "./PaymentCard";
+import PriceFormat from "@/utilitie/priceFormat";
 
-export default function CardPaymentList(prop) {
+export default function CardPaymentList({data}) {
   // const data = prop.paymentCardList
-  const data = [
-    {
-      name: "دوره نکست جی اس مقدماتی از صفر تا صد",
-      price: "90.000",
-      utility: "تومان",
-    },
-    {
-      name: "دوره نکست جی اس مقدماتی از صفر تا صد",
-      price: "90.000",
-      utility: "تومان",
-    },
-    {
-      name: "دوره نکست جی اس مقدماتی از صفر تا صد",
-      price: "90.000",
-      utility: "تومان",
-    },
-    {
-      name: "دوره نکست جی اس مقدماتی از صفر تا صد",
-      price: "90.000",
-      utility: "تومان",
-    },
-  ];
+  const totalPrice = 0
   return (
     <div className="w-[415px] rounded-md grid gap-3 p-[21px] border">
       <div
-        className={`font-semibold border-primary-default pb-[20px] ${style.borderbuttomdashedcustom}`}
+        className={`font-semibold border-primary-default pb-[20px] `}
       >
         جزئیات پرداخت
       </div>
       <div className="grid gap-[8px] my-[10px]">
-        {data.map((item) => {
+        {data.map((item,index) => {
           return (
-            <Fragment>
-              <PaymentCard prop={item} />
-            </Fragment>
+            <>
+              <PaymentCard key={`payCard-${index}`} item={item} />
+              {totalPrice +=item.price}
+            </>
           );
         })}
       </div>
       <div
-        className={`grid grid-flow-col grid-cols-6 gap-1 p-2 justify-center h-[50px] items-center border-primary-default ${style.bordertopdashedcustom}`}
+        className={`grid grid-flow-col grid-cols-6 gap-1 p-2 justify-center h-[50px] items-center border-primary-default`}
       >
         <div className="truncate col-span-4 font-semibold">
           مبلغ قابل پرداخت
         </div>
-        <div className="col-span-1 font-semibold">300.000</div>
-        <div className="col-span-1 font-semibold">تومان</div>
+        <PriceFormat price={totalPrice} />
       </div>
       <Button
         className={

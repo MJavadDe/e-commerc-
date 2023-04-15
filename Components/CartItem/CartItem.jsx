@@ -5,15 +5,15 @@ import PriceFormat from "@/utilitie/priceFormat";
 
 function CartItem({ data }) {
   return (
-    <div className="flex justify-between px-3 py-4 items-center mx-auto gap-12 bg-white rounded-lg">
+    <div className="flex justify-between px-3 py-4 items-center mx-auto gap-12 bg-white rounded-lg w-full">
       <Image src={data.img} width="52" height="52" />
       <div className="text-primary">
-        <p>{data.title}</p>
+        <p>{data.name}</p>
         <p>مدرس دوره: {data.instructor}</p>
       </div>
       <div className="text-primary-dark"> <PriceFormat price={data.price} /> </div>
       <div>
-        <DeleteIcon className="" />
+        <DeleteIcon className="hover:text-red-600 cursor-pointer" />
       </div>
     </div>
   );
