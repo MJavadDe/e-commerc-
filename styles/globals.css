@@ -42,7 +42,7 @@ body {
 
   /* circle bg style start*/
   .bg-circle {
-    @apply before:content-[''] before:w-[900px] before:h-[900px] before:absolute before:left-[-10%] before:top-[-18%] before:bg-primary-light before:z-0  relative overflow-hidden before:rounded-full 
+    @apply before:content-[''] before:w-[500px] lg:before:w-[900px] before:h-[500px] lg:before:h-[900px] before:absolute before:left-[-10%] before:top-[-18%] before:bg-primary-light before:z-0  relative overflow-hidden before:rounded-full 
   }
 
   /* circle bg style end*/
