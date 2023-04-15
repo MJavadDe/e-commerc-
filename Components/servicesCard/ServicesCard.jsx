@@ -37,28 +37,28 @@ function ServicesCard(props) {
     <div className="hidden lg:grid lg:grid-cols-4 text-blue">
       <div className="m-4 flex flex-col justify-center items-center text-center">
         <div className="bg-gray-very-light rounded-full p-1">
-          <Image src={GraduationCap} alt="" className=" p-2 " width={50} />
+          <Image src={GraduationCap} alt="services-card" className=" p-2 " width={50} />
         </div>
         <p className="whitespace-nowrap">دوره های رایگان</p>
       </div>
 
       <div className="m-4 flex flex-col justify-center items-center text-center">
         <div className="bg-gray-very-light rounded-full p-1">
-          <Image src={Teach} alt="" className=" p-2 " width={50} />
+          <Image src={Teach} alt="services-card" className=" p-2 " width={50} />
         </div>
         <p className="whitespace-nowrap">مدرسین مجرب</p>
       </div>
 
       <div className="m-4 flex flex-col justify-center items-center text-center">
         <div className="bg-gray-very-light rounded-full p-1">
-          <Image src={Gift} alt="" className=" p-2 " width={50} />
+          <Image src={Gift} alt="services-card" className=" p-2 " width={50} />
         </div>
         <p className="whitespace-nowrap">کدهای تخفیف</p>
       </div>
 
       <div className="m-4 flex flex-col justify-center items-center text-center">
         <div className="bg-gray-very-light rounded-full p-1">
-          <Image src={SupportSormeyi} alt="" className=" p-2 " width={50} />
+          <Image src={SupportSormeyi} alt="services-card" className=" p-2 " width={50} />
         </div>
         <p className="whitespace-nowrap">پشتیبانی 24/7</p>
       </div>

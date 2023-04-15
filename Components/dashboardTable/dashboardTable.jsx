@@ -62,7 +62,7 @@ const DashboardTable = () => {
             className="flex justify-around text-center items-center bg-[#E1F6ED] h-[63px] text-green-900 rounded"
           >
             <div className="w-[10%] flex justify-center">
-              <Image src={item.image} width={50} height={50} />
+              <Image src={item.image} width={50} height={50} alt="course-image" />
             </div>
             <span className="w-[12%]  truncate">{item.name}</span>
             <span className="w-[12%]  truncate hidden sm:block">

@@ -7,7 +7,7 @@ import React from 'react';
 const Dashbord = () => {
     return (
         <Layout title="Dashboard">
-            <DashboardTable/>
+        
         </Layout>
     );
 };

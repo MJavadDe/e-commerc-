@@ -6,7 +6,7 @@ import PriceFormat from "@/utilitie/priceFormat";
 function CartItem({ data }) {
   return (
     <div className="flex justify-between px-3 py-4 items-center mx-auto gap-12 bg-white rounded-lg w-full">
-      <Image src={data.img} width="52" height="52" />
+      <Image src={data.img} width="52" height="52" alt="cart-item"/>
       <div className="text-primary">
         <p>{data.name}</p>
         <p>مدرس دوره: {data.instructor}</p>

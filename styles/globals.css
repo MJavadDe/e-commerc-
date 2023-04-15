@@ -5,7 +5,9 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  direction: rtl;
+}
+:root{
+  direction: rtl
 }
 
 @layer components {

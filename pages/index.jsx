@@ -10,11 +10,10 @@ import TeacherCarusel from "@/Components/teacherCarusel/TeacherCarusel";
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
-import HeadBox from './../Components/headBox/HeadBox';
-
+import HeadBox from "./../Components/headBox/HeadBox";
 
 const Home = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Layout title="Home page">
       <div className="flex flex-col gap-10">
@@ -41,6 +40,7 @@ const Home = () => {
                 width={300}
                 height={300}
                 className="w-[260px] sm:w-[290px]"
+                alt="hero"
               />
             </div>
           </div>
@@ -48,23 +48,35 @@ const Home = () => {
         <div className="w-full hidden sm:flex">
           <CourseIcons />
         </div>
-<div className="flex flex-col">
-<HeadBox url="/courses" title="آخرین دوره های مجموعه" buttonTitle="مشاهده همه دوره ها" />
-  <CardcourseList router={router} />
-</div>
-<div className="flex flex-col">
-  <HeadBox url="/blog" title="آخرین مقالات سایت" buttonTitle="مشاهده همه مقالات"/>
-<ArticleCardList/>
-</div>
+        <div className="flex flex-col">
+          <HeadBox
+            url="/courses"
+            title="آخرین دوره های مجموعه"
+            buttonTitle="مشاهده همه دوره ها"
+          />
+          <CardcourseList router={router} />
+        </div>
+        <div className="flex flex-col">
+          <HeadBox
+            url="/blog"
+            title="آخرین مقالات سایت"
+            buttonTitle="مشاهده همه مقالات"
+          />
+          <ArticleCardList />
+        </div>
 
         {/* Teachers Section Start */}
         <TeacherCarusel />
         {/* Teachers Section End*/}
-        
+
         <div className="flex flex-col">
-<HeadBox url="/courses" title="دوره های محبوب" buttonTitle="مشاهده همه دوره ها" />
-  <CardcourseList router={router} />
-</div>
+          <HeadBox
+            url="/courses"
+            title="دوره های محبوب"
+            buttonTitle="مشاهده همه دوره ها"
+          />
+          <CardcourseList router={router} />
+        </div>
       </div>
     </Layout>
   );

@@ -10,7 +10,7 @@ export default function ArticleCard({ prop }) {
   return (
     <div className="shadow-md rounded-md font-vazir flex flex-col">
       <div className=" bg-primary-light rounded-t-md">
-        <Image src={prop.img} width={300} height={200} className="w-full" />
+        <Image src={prop.img} width={300} height={200} className="w-full" alt="article" />
       </div>
       <div className="grid gap-[14px] mt-[14px] pb-[20px] px-[20px]">
         <div className="text-secondary-default text-[14px] text-secondary">

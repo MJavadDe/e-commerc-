@@ -48,9 +48,9 @@ export default function ArticleCardList() {
   ];
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-[58px] flex-wrap">
-      {data.map((item) => {
+      {data.map((item , index) => {
         return (
-          <Fragment>
+          <Fragment key={index}>
             <ArticleCard prop={item}></ArticleCard>
           </Fragment>
         );

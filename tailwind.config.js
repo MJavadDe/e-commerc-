@@ -15,10 +15,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        landing: "url('/images/background.png')",
-        "responsive-landing": "url('/images/background2.png')"
-      },
       fontFamily: {
         vazir: "Vazirmatn",
       },
