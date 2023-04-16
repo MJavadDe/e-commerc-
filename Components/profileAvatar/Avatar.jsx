@@ -44,14 +44,16 @@ export default function Avatar({ className, img }) {
   );
   return (
     <>
-      <Upload
-        listType="picture-circle"
-        fileList={fileList}
-        onPreview={handlePreview}
-        onChange={handleChange}
-      >
-        {fileList.length >= 1 ? null : uploadButton}
-      </Upload>
+      <div className="w-[140px] h-[140px]">
+        <Upload
+          listType="picture-circle"
+          fileList={fileList}
+          onPreview={handlePreview}
+          onChange={handleChange}
+        >
+          {fileList.length == 0 && uploadButton}
+        </Upload>
+      </div>
       <Modal
         open={previewOpen}
         title={previewTitle}

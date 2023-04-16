@@ -16,6 +16,7 @@ body {
 .slick-next:before{
   color: black !important;
 }
+<<<<<<< Updated upstream
 .slick-center img{
   transform: scale(1.3)!important;
 }
@@ -28,6 +29,44 @@ body {
 }
 .slick-active img{
   opacity: 1;
+=======
+.ant-upload-list-item::before{
+    width: 100% !important;
+    height: 50% !important;
+    bottom: 0;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 9999px !important;
+    border-bottom-right-radius: 9999px !important;
+    opacity: 1 !important;
+}
+.ant-upload-list-item-actions{
+    transform: translate(0,30px);
+}
+.ant-upload-list-item-actions,.ant-upload-list-item-action{
+    opacity: 1 !important;
+}
+.ant-upload-list-item-done{
+  padding: 0 !important;
+}
+.ant-upload-list-item-actions svg
+/*,
+ .ant-upload-list-item-action svg{ */
+{
+  
+  
+}
+.ant-upload-list-item-container{
+  width: 140px !important;
+  height: 140px !important;
+}
+.ant-upload-select{
+  width: 140px !important;
+  height: 140px !important;  
+}
+.ant-upload-list-item-undefined{
+  padding: 0 !important;
+>>>>>>> Stashed changes
 }
 @layer components {
   /* checkbox style start */
@@ -67,7 +106,9 @@ body {
   }
 
   /* circle bg style end*/
-  
+  .a[title="pre"]{
+    @apply hidden;
+  }
 
   /* .MuiSvgIcon-root
   .MuiSvgIcon-fontSizeMedium
