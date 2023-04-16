@@ -1,15 +1,17 @@
-import DashboardTable from '@/Components/dashboardTable/dashboardTable';
-import Layout from '@/Components/layout';
-import { Button } from 'antd';
-import Link from 'next/link';
-import React from 'react';
+import DashboardTable from "@/Components/dashboardTable/dashboardTable";
+import Layout from "@/Components/layout";
+import { Button } from "antd";
+import Link from "next/link";
+import React from "react";
+import Avatar from "@/Components/profileAvatar/Avatar";
+import avatarimg from "public/teacher-doing-her-classes-online-home_23-2148572340.png";
 
 const Dashbord = () => {
-    return (
-        <>
-        
-        </>
-    );
+  return (
+    <>
+      <Avatar img={"teacher-doing-her-classes-online-home_23-2148572340.png"} />
+    </>
+  );
 };
 
 export default Dashbord;
