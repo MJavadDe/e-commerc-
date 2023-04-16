@@ -9,7 +9,7 @@ function Cardcourse({data}) {
   return (
     <>
     <a href={`/courses/${data.id}`} >
-    <div dir="rtl" className="font-vazir flex flex-col gap-2 shadow-md h-full justify-between">
+    <div dir="rtl" className="font-vazir flex flex-col gap-2 shadow-md h-full justify-between rounded-md">
       <Image src={data.img} width={300} height={200} className="w-full" alt="course" />
       <div className="px-4">
         <p>{data.title}</p>

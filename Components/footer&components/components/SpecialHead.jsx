@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './Footer.module.css'
 
-const SpecialHead = (props) => {
+const SpecialHead = ({className, title}) => {
     return (
-        <p className={props.className}>
-           {props.title} 
+        <p className={`${className} ${style.gradientborderbottom} `}>
+           {title} 
         </p>
     );
 };
