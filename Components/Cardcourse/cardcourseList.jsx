@@ -9,6 +9,7 @@ const CardcourseList = ({router}) => {
 //   console.log(router)
   const data = [
     {
+      id:1,
       title: "دوره ریکت",
       img: "/06.png",
       instructor: "حسامی",
@@ -16,6 +17,7 @@ const CardcourseList = ({router}) => {
       price: "500000",
     },
     {
+      id:2,
       title: "دوره ریکت",
       img: "/06.png",
       instructor: "حسامی",
@@ -23,6 +25,7 @@ const CardcourseList = ({router}) => {
       price: "500000",
     },
     {
+      id:3,
       title: "دوره ریکت",
       img: "/06.png",
       instructor: "حسامی",
@@ -30,6 +33,7 @@ const CardcourseList = ({router}) => {
       price: "500000",
     },
     {
+      id:4,
       title: "دوره ریکت",
       img: "/06.png",
       instructor: "حسامی",
@@ -37,6 +41,7 @@ const CardcourseList = ({router}) => {
       price: "500000",
     },
     {
+      id:5,
       title: "دوره ریکت",
       img: "/06.png",
       instructor: "حسامی",
@@ -44,6 +49,7 @@ const CardcourseList = ({router}) => {
       price: "500000",
     },
     {
+      id:6,
       title: "دوره ریکت",
       img: "/06.png",
       instructor: "حسامی",
@@ -51,6 +57,7 @@ const CardcourseList = ({router}) => {
       price: "500000",
     },
     {
+      id:7,
       title: "دوره ریکت",
       img: "/06.png",
       instructor: "حسامی",
@@ -58,6 +65,7 @@ const CardcourseList = ({router}) => {
       price: "500000",
     },
     {
+      id:8,
       title: "دوره ریکت",
       img: "/06.png",
       instructor: "حسامی",

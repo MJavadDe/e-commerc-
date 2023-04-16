@@ -40,7 +40,7 @@ const Navbar = () => {
           </Button>
         </Link>
         <Link href="/auth"></Link>
-        <Link href="/dashbord">
+        <Link href="/auth">
           <Button
             className={
               "bg-[#198643] rounded-full w-[40px] h-[40px] grid justify-center items-center"
