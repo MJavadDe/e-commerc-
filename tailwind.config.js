@@ -12,6 +12,8 @@ module.exports = {
     "ant-checkbox",
     "ant-checkbox-wrapper",
     "ant-checkbox-checked",
+
+    
   ],
   theme: {
     extend: {
