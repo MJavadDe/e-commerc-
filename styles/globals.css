@@ -16,6 +16,19 @@ body {
 .slick-next:before{
   color: black !important;
 }
+.slick-center img{
+  transform: scale(1.3)!important;
+}
+.slick-slide img{
+  transition: 0.8s;
+  -o-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -webkit-transition: 0.8s;
+  opacity: 0;
+}
+.slick-active img{
+  opacity: 1;
+}
 @layer components {
   /* checkbox style start */
   body {

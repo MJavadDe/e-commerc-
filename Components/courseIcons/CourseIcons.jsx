@@ -11,7 +11,7 @@ import MaterialUi from "./MaterialUi";
 
 const CourseIcons = () => {
   return (
-    <div className="flex m-auto w-full bg-[#F2FCF8] p-3 rounded-md justify-around items-center">
+    <div className="flex m-auto w-full bg-blue-light py-5 justify-evenly rounded-md items-center">
       <div className="bg-white p-2 rounded-md shadow-lg">
         <VueJsIcon />
       </div>

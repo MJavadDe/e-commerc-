@@ -2,7 +2,6 @@ import React from 'react';
 import Slider from "react-slick";
 
 
-
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -27,18 +26,19 @@ function SampleNextArrow(props) {
 const Teachers = () => {
     
     const settings = {
+        className: 'center',
         infinite: true,
-        speed: 500,
+        speed: 800,
+        centerMode: true,
+        centerPadding: "0",
         slidesToShow: 3,
         slidesToScroll: 1,
-        centerMode: true,
-        // centerPadding: "100px",
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
     }
     
     return (
-        <div className='flex flex-col w-8/12 h-64 m-auto'>
+        <div className='flex flex-col w-8/12 h-56 m-auto'>
             <h2 className="text-blue text-xl mb-4">مدرسین نمونه مجموعه آموزشی ما</h2>
             <Slider {...settings}>
                 <div>

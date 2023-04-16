@@ -43,6 +43,7 @@ module.exports = {
         },
         blue: {
           DEFAULT: "#3A4678",
+          light: "#F2FCF8"
         },
 
         white: "#fff",
