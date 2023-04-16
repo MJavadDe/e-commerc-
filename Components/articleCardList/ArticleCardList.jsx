@@ -6,32 +6,21 @@ import "public/blogdefault.png";
 export default function ArticleCardList() {
   const data = [
     {
+      id:1,
       img: "/blogdefault.png",
       title: "مقاله شماره 17",
       name: "میشه یه شبه برنامه نویس شد؟",
       author: "حسامی",
     },
     {
+      id:2,
       img: "/blogdefault.png",
       title: "مقاله شماره 17",
       name: "میشه یه شبه برنامه نویس شد؟",
       author: "حسامی",
     },
     {
-      img: "/blogdefault.png",
-      title: "مقاله شماره 17",
-      name: "میشه یه شبه برنامه نویس شد؟",
-      author: "حسامی",
-      
-    },
-    {
-      img: "/blogdefault.png",
-      title: "مقاله شماره 17",
-      name: "میشه یه شبه برنامه نویس شد؟",
-      author: "حسامی",
-      
-    },
-    {
+      id:3,
       img: "/blogdefault.png",
       title: "مقاله شماره 17",
       name: "میشه یه شبه برنامه نویس شد؟",
@@ -39,6 +28,23 @@ export default function ArticleCardList() {
       
     },
     {
+      id:4,
+      img: "/blogdefault.png",
+      title: "مقاله شماره 17",
+      name: "میشه یه شبه برنامه نویس شد؟",
+      author: "حسامی",
+      
+    },
+    {
+      id:5,
+      img: "/blogdefault.png",
+      title: "مقاله شماره 17",
+      name: "میشه یه شبه برنامه نویس شد؟",
+      author: "حسامی",
+      
+    },
+    {
+      id:6,
       img: "/blogdefault.png",
       title: "مقاله شماره 17",
       name: "میشه یه شبه برنامه نویس شد؟",

@@ -25,13 +25,15 @@ export default function ArticleCard({ prop }) {
       <div className=" bg-gray w-[90%] h-[1px] self-center"></div>
       <div className="grid grid-flow-col justify-between py-[24px] px-[20px]">
         <div>
-          <Button
-            className={
-              "cursor-pointer text-blue bg-primary-light rounded-md py-[5px] px-[22px] hover:bg-secondary-light hover:text-white"
-            }
-          >
-            مطالعه
-          </Button>
+          <a href={`blog/${prop.id}`}>
+            <Button
+              className={
+                "cursor-pointer text-blue bg-primary-light rounded-md py-[5px] px-[22px] hover:bg-secondary-light hover:text-white"
+              }
+            >
+              مطالعه
+            </Button>
+          </a>
         </div>
         <div className="grid grid-flow-col gap-3">
           <CommentIcon className="text-gray" />
