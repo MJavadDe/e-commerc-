@@ -54,4 +54,11 @@ body {
   }
 
   /* circle bg style end*/
+  
+
+  /* .MuiSvgIcon-root
+  .MuiSvgIcon-fontSizeMedium
+  .css-i4bv87-MuiSvgIcon-root{
+    @apply text-primary-dark w-40 bg-primary; */
+  /* } */
 }
