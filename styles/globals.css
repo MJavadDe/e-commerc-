@@ -61,4 +61,12 @@ body {
   .css-i4bv87-MuiSvgIcon-root{
     @apply text-primary-dark w-40 bg-primary; */
   /* } */
+
+
+   .ant-pagination-item-active{
+    @apply text-primary-dark border-primary-dark !important;
+  }
+  .ant-pagination-item-active a {
+    @apply text-primary-dark !important;
+  }
 }

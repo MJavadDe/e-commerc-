@@ -13,6 +13,9 @@ module.exports = {
     "ant-checkbox-wrapper",
     "ant-checkbox-checked",
 
+    // pagination style
+    "ant-pagination-item-active",
+
     
   ],
   theme: {
