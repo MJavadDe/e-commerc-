@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 import Layout from "@/Components/layout";
 import AuthLayout from "@/layouts/authLayout/authLayout";
 import LoginForm from "@/Components/loginForm/loginForm";
 import Image from "next/image";
 
 const Login = ({animation}) => {
+  const [active, setActive] = useState(true);
+
   return (
-    <AuthLayout image="/images/login.png">
+    <AuthLayout image="/images/login.png"  active={active} setActive={setActive} >
       <LoginForm />
     </AuthLayout>
   );

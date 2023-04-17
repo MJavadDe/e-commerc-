@@ -7,9 +7,9 @@ import { SwitchTransition, Transition } from "react-transition-group";
 import gsap from "gsap";
 import { useEffect } from "react";
 
-const AuthLayout = ({ children, image }) => {
+const AuthLayout = ({ children, image,active,setActive }) => {
   const router = useRouter();
-  const [active, setActive] = useState(false);
+  // const [active, setActive] = useState(false);
   const handleClickSignup = () => {
     // setActive(true);
     router.replace("/auth/signup");
