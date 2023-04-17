@@ -123,4 +123,7 @@ body {
   .ant-pagination-item-active a {
     @apply text-primary-dark !important;
   }
+  .ant-pagination-item-link{
+    @apply p-0 m-0;
+  }
 }
