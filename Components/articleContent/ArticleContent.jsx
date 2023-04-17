@@ -5,7 +5,7 @@ import "public/blogdefault2.png";
 
 export default function ArticleContent() {
   const data = {
-    img: "/article-content.png",
+    img: "/blogdefault2.png",
     title:
       "ام آی تی و اریکسون برای تحقیق در مورد نسل بعدی شبکه های تلفن همراه ،توافقنامه همکاری منعقد می کنند",
     writeDate: "1400/06/05",
