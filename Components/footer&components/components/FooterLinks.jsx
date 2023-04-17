@@ -5,7 +5,7 @@ import Link from 'next/link';
 const FooterLinks = (props) => {
     return (
         <div className='flex flex-col gap-2 w-2/5 md:w-1/5' >
-            <SpecialHead className={`${style.gradientborderbottom} top-0 md:text-lg text-[16px] w-fit p-1`} title={props.content.title}/>
+            <SpecialHead className={`${style.gradientborderbottom} `} title={props.content.title}/>
             <p>
                 <Link href={"/"} className={props.content.style}>{props.content.headOne}</Link>
             </p>

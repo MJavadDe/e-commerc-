@@ -61,6 +61,7 @@ const Home = () => {
             url="/blog"
             title="آخرین مقالات سایت"
             buttonTitle="مشاهده همه مقالات"
+            className="text-secondary"
           />
           <ArticleCardList />
         </div>
@@ -74,6 +75,7 @@ const Home = () => {
             url="/courses"
             title="دوره های محبوب"
             buttonTitle="مشاهده همه دوره ها"
+            className="text-secondary"
           />
           <CardcourseList router={router} />
         </div>
