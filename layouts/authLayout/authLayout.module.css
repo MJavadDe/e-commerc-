@@ -1,6 +1,8 @@
 .right {
-  transform: translateX(-97%);
+  left: 2%;
 }
 .left {
-  transform: translateX(-3%);
+
+  left:48%;
+
 }

@@ -5,8 +5,8 @@ import { SwitchTransition, Transition } from "react-transition-group";
 import gsap from "gsap";
 import { useRouter } from "next/router";
 
-const Layout = ({ title, children }) => {
-  const router = useRouter()
+const Layout = ({ children, footer, animation }) => {
+  const router = useRouter();
   const onPageEnter = (node) => {
     gsap.fromTo(
       node,
@@ -49,22 +49,27 @@ const Layout = ({ title, children }) => {
         <header className="w-full">
           <Navbar />
         </header>
-        <SwitchTransition>
-          <Transition
-            key={router.asPath}
-            timeout={300}
-            in={true}
-            onEnter={onPageEnter}
-            onExit={onPageExit}
-            mountOnEnter={true}
-            unmountOnExit={true}
-          >
-            <main className="my-14">{children}</main>
-          </Transition>
-        </SwitchTransition>
-        <footer className="w-full">
-          <Footer />
-        </footer>
+        {animation && (
+          <SwitchTransition>
+            <Transition
+              key={router.asPath}
+              timeout={300}
+              in={true}
+              onEnter={onPageEnter}
+              onExit={onPageExit}
+              mountOnEnter={true}
+              unmountOnExit={true}
+            >
+              <main className="my-14">{children}</main>
+            </Transition>
+          </SwitchTransition>
+        )}
+        {!animation && <main className="my-14">{children}</main>}
+        {footer && (
+          <footer className="w-full">
+            <Footer />
+          </footer>
+        )}
       </div>
     </>
   );
