@@ -23,7 +23,7 @@ const AuthLayout = ({ children, image, active, setActive }) => {
   }, []);
 
   return (
-    <div className="bg-primary-very-light bg-circle flex flex-col-reverse  lg:flex-row justify-between items-center h-[30rem] lg:h-[60rem] mb-[20rem] lg:mb-0">
+    <div className="bg-primary-very-light bg-circle flex flex-col-reverse  lg:flex-row justify-between items-center h-[30rem] lg:h-[48rem] mb-[20rem] lg:mb-0">
       {children}
 
       <div className="flex flex-col justify-center items-center">
@@ -35,7 +35,7 @@ const AuthLayout = ({ children, image, active, setActive }) => {
           alt="register"
         />
 
-        <div className=" lg:absolute bottom-[16rem] pt-5">
+        <div className=" lg:absolute bottom-[10rem] pt-5">
           <div className="bg-secondary-light w-[212px] h-[60px] flex justify-between items-center rounded-full relative">
             <div
               className={`w-[50%] bg-white rounded-full absolute h-[90%] transition-all duration-1000   ${

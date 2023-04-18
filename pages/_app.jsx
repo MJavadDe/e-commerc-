@@ -10,8 +10,7 @@ export default function App({ Component, pageProps, ...appProps }) {
     appProps.router.pathname
   );
   const footer = isFooterNeeded ? false : true;
-  const roout = useRouter();
-  pageProps.protect && roout.push('/')
+
   return (
     <LayoutComponent animation={pageProps.animation} footer={footer}>
       <Component {...pageProps} />
