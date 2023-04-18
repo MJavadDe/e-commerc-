@@ -15,11 +15,16 @@ module.exports = {
 
     // pagination style
     "ant-pagination-item-active",
-
+    "ant-pagination-item-link",
     
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'all': '0px 0px 21px -6px rgba(0, 0, 0, 0.3)',
+        'share': '0px 0px 13px -6px rgba(0, 0, 0, 0.3)',
+        
+      },
       fontFamily: {
         vazir: "Vazirmatn",
       },

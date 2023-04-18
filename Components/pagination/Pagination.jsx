@@ -13,7 +13,7 @@ function Paginations({total , mypage}) {
     setCurrent(page);
   };
   return (
-    <div className="flex justify-center h-16 items-center w-[350px] shadow-lg rounded-lg">
+    <div className="flex justify-center h-16 items-center w-[320px] shadow-all rounded-lg">
       <Pagination
       className={styles.anticon}
       current={current}
