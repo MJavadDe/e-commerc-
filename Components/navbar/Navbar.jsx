@@ -21,7 +21,7 @@ const Navbar = () => {
         <NavLink url="" children={<Button children={<Image src="/logo-1.png" width={40} height={40} alt="logo" />} className={""}/>}/>
         <NavLink children="خانه" url=""/>
         <NavLink children="دوره ها" url="courses"/>
-        <NavLink children="بلاگ" url="blog"/>
+        <NavLink children="بلاگ" url="blog" />
         <NavLink children="تماس با ما" url="Contact"/>
         <NavLink children="درباره ما" url="aboutUs"/>
         </div>
