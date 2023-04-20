@@ -16,7 +16,10 @@ export default async function handler(req, res) {
         price: null,
         categories: null,
         images: null,
-        teacher: "",
+        teacher: {
+          name:null,
+          image:null
+        },
       };
       courseData.id = course.id;
       courseData.name = course.name;
@@ -25,7 +28,12 @@ export default async function handler(req, res) {
       await Promise.all(
         course.meta_data.map(async (meta) => {
           if (meta.key === "_studiare_course_teacher") {
-            courseData.teacher = await getTeacherById(meta.value);
+            const teacherData = await getTeacherById(meta.value);
+            courseData.teacher.name = teacherData.title.rendered;
+            const { data:teacherImage } = await axios.get(
+              `https://codecraft.ir/online-course/wp-json/wp/v2/media/${teacherData.featured_media}` // Node.js backend path
+            );
+            courseData.teacher.image = teacherImage.source_url
           }
         })
       );

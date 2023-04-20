@@ -10,13 +10,16 @@ const CardcourseList = ({ router }) => {
   // let data = []
   const [data, setData] = useState([]);
   const fetch = async () => {
-    setData((await axios.get("http://localhost:3000/api/productsList")));
+      console.time('start fetch');
+          setData((await axios.get("http://localhost:3000/api/productsList")));
+    console.timeLog('end fetch');
+
   };
   useEffect(() => {
     fetch();
-  }, []);
-  console.log(data);
 
+  }, []);
+console.log(data);
   // const data = [
   //   {
   //     id:1,
