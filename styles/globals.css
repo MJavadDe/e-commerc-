@@ -126,4 +126,8 @@ body {
   .ant-pagination-item-link{
     @apply p-0 m-0;
   }
+
+  .active{
+    @apply  border-primary border-b-2;
+  }
 }
