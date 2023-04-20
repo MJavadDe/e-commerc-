@@ -127,7 +127,11 @@ body {
     @apply p-0 m-0;
   }
 
-  .active{
+  /* .active{
     @apply  border-primary border-b-2;
+  } */
+
+  .slide{
+    /* @apply ; */
   }
 }
