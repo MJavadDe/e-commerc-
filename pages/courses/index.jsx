@@ -6,8 +6,10 @@ import React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Paginations from "./../../Components/pagination/Pagination";
 import { useRouter } from "next/router";
+import axios from "axios";
 
-const Courses = () => {
+const Courses = ({data}) => {
+  console.log(data);
   const router = useRouter()
   return (
     <>
@@ -25,7 +27,7 @@ const Courses = () => {
           </div>
         </div>
 
-        <CardcourseList router={router} />
+        <CardcourseList data={data} router={router} />
         <div className="mt-5">
           <Paginations />
         </div>
@@ -33,5 +35,13 @@ const Courses = () => {
     </>
   );
 };
-
+export async function getServerSideProps(){
+const {data} = await axios.get("http://localhost:3000/api/productsList")
+if(!data){
+  notFound = true
+}
+return{
+  props:{data}
+}
+}
 export default Courses;

@@ -6,7 +6,7 @@ import  KeyboardArrowDownIcon  from '@mui/icons-material/KeyboardArrowDown';
 import Searchbox from "@/Components/searchbox/searchbox";
 import Paginations from "@/Components/pagination/Pagination";
 
-const Blog = () => {
+const Blog = ({x}) => {
   return (
     <>
       <div className=" flex flex-col font-vazir">
