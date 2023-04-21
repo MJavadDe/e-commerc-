@@ -29,6 +29,7 @@ body {
 .slick-active img{
   opacity: 1;
 }
+/* avatar component prop */
 .ant-upload-list-item::before{
     width: 100% !important;
     height: 50% !important;
@@ -39,21 +40,27 @@ body {
     border-bottom-right-radius: 9999px !important;
     opacity: 1 !important;
 }
+.ant-upload-list-item-thumbnail{
+  cursor: default;
+}
+.anticon-eye{
+  display: none;
+}
 .ant-upload-list-item-actions{
     transform: translate(0,30px);
+}
+/* can edit is active */
+.ant-upload-list-item-actions , .ant-upload-list-item::before{
+  display: block;
+}
+.ant-upload-list-item-custom::before{
+  display: none;
 }
 .ant-upload-list-item-actions,.ant-upload-list-item-action{
     opacity: 1 !important;
 }
 .ant-upload-list-item-done{
   padding: 0 !important;
-}
-.ant-upload-list-item-actions svg
-/*,
- .ant-upload-list-item-action svg{ */
-{
-  
-  
 }
 .ant-upload-list-item-container{
   width: 140px !important;
@@ -65,8 +72,8 @@ body {
 }
 .ant-upload-list-item-undefined{
   padding: 0 !important;
-  
 }
+/* end avatar component prop */
 
 @layer components {
   /* checkbox style start */

@@ -2,28 +2,102 @@ import React, { useRef } from "react";
 import Button from "@/Commons/buttons/Button";
 import Link from "next/link";
 import NavLink from "./NavLink";
+import Avatar from "@/Components/avatar/Avatar";
+import Search from "@/Components/searchbox/searchbox";
 import ShoppingBag from "@mui/icons-material/ShoppingBag";
 import PersonIcon from "@mui/icons-material/Person";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import "public/shopping-bag.png";
 
 import "public/logo-1.png";
+import "public/profile.png";
 import Image from "next/image";
 
 const Navbar = () => {
   const ref = useRef();
 
   const handleClick = (event) => {
-    console.log(event.target);
     ref.current.style.width = `${event.target.offsetWidth}px`;
     ref.current.style.left = `${event.target.offsetLeft}px`;
   };
 
+  const handleSidebar = () => {
+    if(document.querySelector("#sidebar").classList.contains("fixed")){
+      document.querySelector("#sidebar").classList.replace("fixed","hidden");
+    }
+    else{
+      document.querySelector("#sidebar").classList.replace("hidden","fixed");
+    }
+  };
+
   return (
     <div className="mx-auto bg-primary-light flex font-vazir justify-between px-4 py-[15px] rounded-md">
-      <div>
+      <div className="flex items-center">
         <div className="md:hidden">
-          {<MenuIcon className=" text-secondary text-4xl cursor-pointer" />}
+          {
+            <MenuIcon
+              className=" text-secondary text-4x1 cursor-pointer"
+              onClick={handleSidebar}
+            />
+          }
+          <div className="hidden top-0 right-0 w-[350px] bg-white rounded-l-md h-screen z-50 transition-all" id="sidebar">
+            <div className="flex justify-between items-center px-[20px] py-[12.5px] bg-secondary-very-light rounded-tl-md">
+              <NavLink
+                url=""
+                children={
+                  <Button
+                    children={
+                      <Image
+                        src="/logo-1.png"
+                        width={40}
+                        height={40}
+                        alt="logo"
+                      />
+                    }
+                    className={""}
+                  />
+                }
+              />
+              <div>
+                {
+                  <CloseIcon
+                    className="text-black cursor-pointer w-[30px] h-[30px]"
+                    onClick={handleSidebar}
+                  />
+                }
+              </div>
+            </div>
+            <div className="px-[12px] py-[16px]">
+              <div className="bg-secondary-very-light rounded-md px-[10px] py-[8px]">
+                <div className="flex justify-center items-center gap-[29px]">
+                  <Avatar canEditImg={false}  img = {"/profile.png"} />
+                  <span className="text-center">مریم مهاجر </span>
+                </div>
+                <Search
+                  className={"bg-[#82D8B9] rounded-[50px] mt-[8px]"}
+                  placeholder={"جستجوی دوره..."}
+                ></Search>
+              </div>
+              <div className="bg-secondary-very-light rounded-md mt-[16px] px-[12.5px] pt-[23px] pb-[15px] grid grid-flow-row gap-[5px]">
+                <div className="px-[21px] py-[10px] rounded-md text-white bg-primary-dark">
+                  <NavLink children="خانه" url=""/>
+                </div>
+                <div className="px-[21px] py-[10px] rounded-md text-secondary-light hover:bg-primary-light transition-all">
+                  <NavLink children="دوره ها" url="courses" />
+                </div>
+                <div className="px-[21px] py-[10px] rounded-md text-secondary-light hover:bg-primary-light transition-all">
+                  <NavLink children="بلاگ" url="blog"/>
+                </div>
+                <div className="px-[21px] py-[10px] rounded-md text-secondary-light hover:bg-primary-light transition-all">
+                  <NavLink children="تماس با ما" url="Contact"/>
+                </div>
+                <div className="px-[21px] py-[10px] rounded-md text-secondary-light hover:bg-primary-light transition-all">
+                  <NavLink children="درباره ما" url="aboutUs"/>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="relative hidden md:flex items-center gap-14 text-blue">
           <NavLink
