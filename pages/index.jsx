@@ -11,8 +11,9 @@ import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
 import HeadBox from "./../Components/headBox/HeadBox";
+import axios from "axios"
 
-const Home = () => {
+const Home = ({data}) => {
   const router = useRouter();
   return (
     <>
@@ -54,7 +55,7 @@ const Home = () => {
             title="آخرین دوره های مجموعه"
             buttonTitle="مشاهده همه دوره ها"
           />
-          <CardcourseList router={router} />
+          <CardcourseList data={data} router={router} />
         </div>
         <div className="flex flex-col">
           <HeadBox
@@ -77,11 +78,20 @@ const Home = () => {
             buttonTitle="مشاهده همه دوره ها"
             className="text-secondary"
           />
-          <CardcourseList router={router} />
+          <CardcourseList data={data} router={router} />
         </div>
       </div>
     </>
   );
 };
+export async function getServerSideProps(){
+  const {data} = await axios.get("http://localhost:3000/api/productsList")
+if(!data){
+  notFound = true
+}
+return{
+  props:{data}
+}
+}
 
 export default Home;
