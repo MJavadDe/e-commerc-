@@ -11,7 +11,7 @@ const CardcourseList = ({ router }) => {
   const [data, setData] = useState([]);
   const fetch = async () => {
       console.time('start fetch');
-          setData((await axios.get("http://localhost:3000/api/productsList")));
+          setData((await axios.get("http://localhost:3000/api/productsList?per_page=3")));
     console.timeLog('end fetch');
 
   };
