@@ -53,9 +53,9 @@ body {
 .ant-upload-list-item-actions , .ant-upload-list-item::before{
   display: block;
 }
-.ant-upload-list-item-custom::before{
+/* .ant-upload-list-item-custom::before{
   display: none;
-}
+} */
 .ant-upload-list-item-actions,.ant-upload-list-item-action{
     opacity: 1 !important;
 }

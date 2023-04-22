@@ -31,12 +31,6 @@ export default function Avatar({ canEditImg, img }) {
       </div>
     </div>
   );
-  useEffect(function checkEditAbility(){
-    if (!canEditImg) {
-      document.querySelector(".ant-upload-list-item-actions").style.display = "none";
-      document.querySelector(".ant-upload-list-item").classList.toggle("ant-upload-list-item-custom");
-    }
-  });
   return (
     <>
       <div className="w-[140px] h-[140px]">
