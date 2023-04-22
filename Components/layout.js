@@ -5,7 +5,7 @@ import { SwitchTransition, Transition } from "react-transition-group";
 import gsap from "gsap";
 import { useRouter } from "next/router";
 
-const Layout = ({ children, footer, animation }) => {
+const Layout = ({ children, footer , animation }) => {
   const router = useRouter();
   const onPageEnter = (node) => {
     gsap.fromTo(

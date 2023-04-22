@@ -2,7 +2,7 @@ import CardcourseList from "@/Components/Cardcourse/cardcourseList";
 import Layout from "@/Components/layout";
 import Searchbox from "@/Components/searchbox/searchbox";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Paginations from "./../../Components/pagination/Pagination";
 import { useRouter } from "next/router";
@@ -24,14 +24,14 @@ const Courses = () => {
             />
           </div>
           <div className="flex items-center">
-            <span>مرتب سازی بر اساس قیمت</span>
+            <span>مرتب 1سازی بر اساس قیمت</span>
             <KeyboardArrowDownIcon />
           </div>
         </div>
 
         <CardcourseList router={router} />
         <div className="mt-5">
-          <Paginations />
+          <Paginations total={13} />
         </div>
       </div>
     </>
@@ -47,5 +47,18 @@ export async function getServerSideProps(){
       dehydratedState: dehydrate(queryClient),
     },
   }
-}
+  }
+
+// export async function getServerSideProps(context) {
+//   const page = context.query.page ? context.query.page : 1;
+//   const { data } = await axios.get(
+//     `http://localhost:3000/api/productsList?per_page=11&page=${page}`
+//   );
+//   if (!data) {
+//     notFound = true;
+//   }
+//   return {
+//     props: { data },
+//   };
+// }
 export default Courses;
