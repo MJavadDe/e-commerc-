@@ -1,6 +1,6 @@
 import ListCartItem from "@/Components/CartItem/ListCartItem";
 import HeadBox from "@/Components/headBox/HeadBox";
-import Layout from "@/Components/layout";
+import Layout from "@/layouts/layout";
 import CardPaymentList from "@/Components/payDetail cardList/CardPaymentList";
 import CartLayout from "@/layouts/CartLayout";
 import React, { useState } from "react";

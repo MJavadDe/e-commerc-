@@ -17,6 +17,7 @@ function Paginations({ total, mypage }) {
       <Pagination
         className={styles.anticon}
         current={current}
+        
         onChange={onChange}
         total={total}
       />

@@ -1,18 +1,17 @@
 import CardcourseList from "@/Components/Cardcourse/cardcourseList";
-import Layout from "@/Components/layout";
+import Layout from "@/layouts/layout";
 import Searchbox from "@/Components/searchbox/searchbox";
 import Link from "next/link";
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Paginations from "./../../Components/pagination/Pagination";
 import { useRouter } from "next/router";
-import axios from "axios";
 import { fetchProducts } from "@/hooks/services";
 import { QueryClient, dehydrate } from "react-query";
 
 const Courses = () => {
   // console.log(data);
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <div className=" flex flex-col font-vazir">
@@ -37,17 +36,19 @@ const Courses = () => {
     </>
   );
 };
-export async function getServerSideProps(){
-  const queryClient = new QueryClient()
+export async function getServerSideProps() {
+  const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery(['Products', "per_page=11"], () => fetchProducts("per_page=11"))
+  await queryClient.prefetchQuery(["Products", "per_page=11"], () =>
+    fetchProducts("per_page=11")
+  );
 
   return {
     props: {
       dehydratedState: dehydrate(queryClient),
     },
-  }
-  }
+  };
+}
 
 // export async function getServerSideProps(context) {
 //   const page = context.query.page ? context.query.page : 1;

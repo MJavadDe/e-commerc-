@@ -1,12 +1,12 @@
-import Layout from "@/Components/layout";
+import Layout from "@/layouts/layout";
 import Link from "next/link";
 import React from "react";
-import  ArticleCardList  from '@/Components/articleCardList/ArticleCardList';
-import  KeyboardArrowDownIcon  from '@mui/icons-material/KeyboardArrowDown';
+import ArticleCardList from "@/Components/articleCardList/ArticleCardList";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Searchbox from "@/Components/searchbox/searchbox";
 import Paginations from "@/Components/pagination/Pagination";
 
-const Blog = ({x}) => {
+const Blog = ({ x }) => {
   return (
     <>
       <div className=" flex flex-col font-vazir">
@@ -23,12 +23,13 @@ const Blog = ({x}) => {
           </div>
         </div>
 
-        <ArticleCardList/>
+        <ArticleCardList />
         <div className="mt-5">
           <Paginations />
         </div>
       </div>
     </>
-  );};
+  );
+};
 
 export default Blog;

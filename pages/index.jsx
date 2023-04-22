@@ -3,7 +3,7 @@ import ArticleCard from "@/Components/articleCardList/ArticleCard";
 import ArticleCardList from "@/Components/articleCardList/ArticleCardList";
 import ArticleContent from "@/Components/articleContent/ArticleContent";
 import CourseIcons from "@/Components/courseIcons/CourseIcons";
-import Layout from "@/Components/layout";
+import Layout from "@/layouts/layout";
 import Searchbox from "@/Components/searchbox/searchbox";
 import ServicesCard from "@/Components/servicesCard/ServicesCard";
 import TeacherCarusel from "@/Components/teacherCarousel/TeacherCarusel";
@@ -11,9 +11,9 @@ import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
 import HeadBox from "./../Components/headBox/HeadBox";
-import axios from "axios"
+import axios from "axios";
 
-const Home = ({data}) => {
+const Home = ({ data }) => {
   const router = useRouter();
   return (
     <>
@@ -84,14 +84,16 @@ const Home = ({data}) => {
     </>
   );
 };
-export async function getServerSideProps(){
-  const {data} = await axios.get("http://localhost:3000/api/productsList?per_page=8")
-if(!data){
-  notFound = true
-}
-return{
-  props:{data}
-}
+export async function getServerSideProps() {
+  const { data } = await axios.get(
+    "http://localhost:3000/api/productsList?per_page=8"
+  );
+  if (!data) {
+    notFound = true;
+  }
+  return {
+    props: { data },
+  };
 }
 
 export default Home;

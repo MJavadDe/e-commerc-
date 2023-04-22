@@ -14,7 +14,8 @@ const CardcourseList = ({router }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
       {router.route === "/courses" && <FilterCourseCard />}
-      {data.map((item, index) => (
+      {isLoading && <h1>loading</h1>}
+      {!isLoading && data.map((item, index) => (
         <div key={index}>
           <Cardcourse key={index} data={item} />
         </div>

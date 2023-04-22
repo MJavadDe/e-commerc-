@@ -1,10 +1,9 @@
 import ArticleContent from "@/Components/articleContent/ArticleContent";
-import Layout from "@/Components/layout";
+import Layout from "@/layouts/layout";
 import Paginations from "@/Components/pagination/Pagination";
 import SshareArticle from "@/Components/shareArticleComponent/SshareArticle";
 import { useRouter } from "next/router";
 import React from "react";
-
 
 const SingleMag = () => {
   const router = useRouter();
