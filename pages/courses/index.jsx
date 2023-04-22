@@ -28,7 +28,7 @@ const Courses = () => {
           </div>
         </div>
 
-        <CardcourseList router={router} />
+        <CardcourseList router={router} per_page={11} />
         <div className="mt-5">
           <Paginations total={13} />
         </div>
@@ -39,7 +39,7 @@ const Courses = () => {
 export async function getServerSideProps() {
   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery(["Products", "per_page=3"], () =>
+  await queryClient.prefetchQuery(["Products", "per_page=11"], () =>
     fetchProducts("per_page=11")
   );
 

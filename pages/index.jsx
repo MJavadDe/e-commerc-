@@ -55,7 +55,7 @@ const Home = ({ data }) => {
             title="آخرین دوره های مجموعه"
             buttonTitle="مشاهده همه دوره ها"
           />
-          <CardcourseList data={data} router={router} />
+          <CardcourseList per_page={8} router={router} />
         </div>
         <div className="flex flex-col">
           <HeadBox
@@ -78,22 +78,23 @@ const Home = ({ data }) => {
             buttonTitle="مشاهده همه دوره ها"
             className="text-secondary"
           />
-          <CardcourseList data={data} router={router} />
+          <CardcourseList per_page={4} router={router} />
         </div>
       </div>
     </>
   );
 };
 export async function getServerSideProps() {
-  const { data } = await axios.get(
-    "http://localhost:3000/api/productsList?per_page=8"
+  const queryClient = new QueryClient();
+
+  await queryClient.prefetchQuery(["Products", "per_page=11"], () =>
+    fetchProducts("per_page=11")
   );
-  if (!data) {
-    notFound = true;
-  }
+
   return {
-    props: { data },
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
   };
 }
-
 export default Home;
