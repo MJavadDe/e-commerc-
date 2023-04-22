@@ -18,8 +18,7 @@ function Cardcourse({ data }) {
         >
           <Image
             src={image}
-            width={300}
-            height={200}
+ 
             className=""
             fill
             alt="course"

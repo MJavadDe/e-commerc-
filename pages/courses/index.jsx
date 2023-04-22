@@ -7,9 +7,11 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Paginations from "./../../Components/pagination/Pagination";
 import { useRouter } from "next/router";
 import axios from "axios";
+import { fetchProducts } from "@/hooks/services";
+import { QueryClient, dehydrate } from "react-query";
 
-const Courses = ({data}) => {
-  console.log(data);
+const Courses = () => {
+  // console.log(data);
   const router = useRouter()
   return (
     <>
@@ -27,7 +29,7 @@ const Courses = ({data}) => {
           </div>
         </div>
 
-        <CardcourseList data={data} router={router} />
+        <CardcourseList router={router} />
         <div className="mt-5">
           <Paginations />
         </div>
@@ -36,12 +38,14 @@ const Courses = ({data}) => {
   );
 };
 export async function getServerSideProps(){
-const {data} = await axios.get("http://localhost:3000/api/productsList")
-if(!data){
-  notFound = true
-}
-return{
-  props:{data}
-}
+  const queryClient = new QueryClient()
+
+  await queryClient.prefetchQuery(['Products', "per_page=11"], () => fetchProducts("per_page=11"))
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  }
 }
 export default Courses;
