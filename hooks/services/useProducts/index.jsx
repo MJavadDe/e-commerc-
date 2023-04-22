@@ -17,6 +17,7 @@ const fetchProducts = async (Params = null) => {
         categories: null,
         images: null,
         description : null,
+        durationCourse:null,
         teacher: {
           name: null,
           image: null,
@@ -29,6 +30,9 @@ const fetchProducts = async (Params = null) => {
       courseData.images = course.images;
       await Promise.all(
         course.meta_data.map(async (meta) => {
+          if (meta.key === "_studiare_course_duration") {
+            courseData.durationCourse = meta.value;
+          }
           if (meta.key === "_studiare_course_teacher") {
             const teacherData = await getTeacherById(meta.value);
             courseData.teacher.name = teacherData.title.rendered;
