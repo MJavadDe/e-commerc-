@@ -71,7 +71,7 @@ const Navbar = () => {
             <div className="px-[12px] py-[16px]">
               <div className="bg-secondary-very-light rounded-md px-[10px] py-[8px]">
                 <div className="flex justify-center items-center gap-[29px]">
-                  <Avatar canEditImg={false}  img = {"/profile.png"} />
+                  <div className="rounded-full"><img src="/profile.png" alt="profileimg"/></div>
                   <span className="text-center">مریم مهاجر </span>
                 </div>
                 <Search
