@@ -2,11 +2,10 @@ import axios from "axios";
 import { useQuery } from "react-query";
 
 const fetchProducts = async (Params = null) => {
-  const query = Params ? `&${Params}` : ''
-  const {data} = await axios
-    .get(
-      `https://codecraft.ir/online-course/wp-json/wc/v3/products?consumer_key=ck_294b2788105f9c5336acf86b3e27f19eaeadb588&consumer_secret=cs_04576e92a5cba664e3051844dad21628f6ea0c35${query}`
-    );
+  const query = Params ? `&${Params}` : "";
+  const { data } = await axios.get(
+    `https://codecraft.ir/online-course/wp-json/wc/v3/products?consumer_key=ck_294b2788105f9c5336acf86b3e27f19eaeadb588&consumer_secret=cs_04576e92a5cba664e3051844dad21628f6ea0c35${query}`
+  );
   //   const result = parsed.filter(x => x.id <= Params)
   let courses = [];
   await Promise.all(
@@ -17,11 +16,13 @@ const fetchProducts = async (Params = null) => {
         price: null,
         categories: null,
         images: null,
+        description : null,
         teacher: {
           name: null,
           image: null,
-        },
+        },     
       };
+      courseData.description = course.description;
       courseData.id = course.id;
       courseData.name = course.name;
       courseData.price = course.price;
@@ -42,19 +43,17 @@ const fetchProducts = async (Params = null) => {
       courses.push(courseData);
     })
   );
-//   console.log(parsed);
+  //   console.log(parsed);
   return courses;
 };
 
-
 async function getTeacherById(teacherId) {
-    const { data } = await axios.get(
-      `https://codecraft.ir/online-course/wp-json/wp/v2/teacher/${teacherId}` // Node.js backend path
-    );
-    return data;
-  }
+  const { data } = await axios.get(
+    `https://codecraft.ir/online-course/wp-json/wp/v2/teacher/${teacherId}` // Node.js backend path
+  );
+  return data;
+}
 
-  
 const useProducts = (Params) => {
   return useQuery(["Products", Params], () => fetchProducts(Params));
 };

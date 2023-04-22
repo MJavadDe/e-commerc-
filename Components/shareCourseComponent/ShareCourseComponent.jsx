@@ -5,7 +5,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 function ShareCourseComponent(props) {
   return (
-    <div className="flex justify-center items-center shadow-all h-[120px] ">
+    <div className="flex justify-center items-center shadow-all h-[120px] rounded-md text-blue">
       <h5 className=" text-primary-default  px-24 ">به اشتراک گذاری</h5>
       
         <div className="text-primary-default px-3 py-3 m-3 rounded-full shadow-share"><TwitterIcon className=""/></div>
