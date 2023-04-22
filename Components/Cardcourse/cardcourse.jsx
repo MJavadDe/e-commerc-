@@ -8,7 +8,6 @@ import PriceFormat from "@/utilitie/priceFormat";
 function Cardcourse({ data }) {
   const [image , setImage] = useState(data.images[0] ? data.images[0].src : "/images/placeholder-image.webp" )
   
-  console.log(image);
   return (
     <>
       <a href={`/courses/${data.id}`}>
@@ -16,15 +15,15 @@ function Cardcourse({ data }) {
           dir="rtl"
           className="font-vazir flex flex-col gap-2 shadow-md h-full justify-between rounded-md overflow-hidden"
         >
+          <div className="w-full h-[225px] relative">
           <Image
             src={image}
-            width={300}
-            height={200}
-            className=""
-            fill
+            layout={'fill'}
+            objectFit={'cover'}
             alt="course"
             onError={()=>setSrc('/images/placeholder-image.webp')}
           />
+          </div>
           
           <div className="px-4">
             <p>{data.name}</p>
@@ -37,7 +36,7 @@ function Cardcourse({ data }) {
           <div className="flex justify-between w-[95%] self-center my-3">
             <div className="flex gap-1">
               <AccessAlarmIcon className="text-gray" />
-              <span className="text-gray">{data.time}</span>
+              <span className="text-gray">{data.durationCourse}</span>
             </div>
             <span className="text-green-700">
               <PriceFormat price={data.price}></PriceFormat>

@@ -2,15 +2,15 @@ import CardcourseList from "@/Components/Cardcourse/cardcourseList";
 import Layout from "@/Components/layout";
 import Searchbox from "@/Components/searchbox/searchbox";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Paginations from "./../../Components/pagination/Pagination";
 import { useRouter } from "next/router";
 import axios from "axios";
 
-const Courses = ({data}) => {
+const Courses = ({ data }) => {
   console.log(data);
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <div className=" flex flex-col font-vazir">
@@ -22,26 +22,29 @@ const Courses = ({data}) => {
             />
           </div>
           <div className="flex items-center">
-            <span>مرتب سازی بر اساس قیمت</span>
+            <span>مرتب 1سازی بر اساس قیمت</span>
             <KeyboardArrowDownIcon />
           </div>
         </div>
 
         <CardcourseList data={data} router={router} />
         <div className="mt-5">
-          <Paginations />
+          <Paginations total={13} />
         </div>
       </div>
     </>
   );
 };
-export async function getServerSideProps(){
-const {data} = await axios.get("http://localhost:3000/api/productsList")
-if(!data){
-  notFound = true
-}
-return{
-  props:{data}
-}
+export async function getServerSideProps(context) {
+  const page = context.query.page ? context.query.page : 1;
+  const { data } = await axios.get(
+    `http://localhost:3000/api/productsList?per_page=11&page=${page}`
+  );
+  if (!data) {
+    notFound = true;
+  }
+  return {
+    props: { data },
+  };
 }
 export default Courses;

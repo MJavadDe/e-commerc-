@@ -85,7 +85,7 @@ const Home = ({data}) => {
   );
 };
 export async function getServerSideProps(){
-  const {data} = await axios.get("http://localhost:3000/api/productsList")
+  const {data} = await axios.get("http://localhost:3000/api/productsList?per_page=8")
 if(!data){
   notFound = true
 }
