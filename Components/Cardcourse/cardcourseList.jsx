@@ -6,7 +6,7 @@ import axios from "axios";
 import { useProducts } from "@/hooks/services";
 
 const CardcourseList = ({router }) => {
-  const [productCount, setProductCount] = useState('per_page=11')
+  const [productCount, setProductCount] = useState('per_page=3')
 
   const { data, isLoading, isFetching,isSuccess } = useProducts(productCount)
   

@@ -2,9 +2,10 @@ import axios from "axios";
 import { useQuery } from "react-query";
 
 const fetchProducts = async (Params = null) => {
+  const query = Params ? `&${Params}` : ''
   const {data} = await axios
     .get(
-      `https://codecraft.ir/online-course/wp-json/wc/v3/products?consumer_key=ck_294b2788105f9c5336acf86b3e27f19eaeadb588&consumer_secret=cs_04576e92a5cba664e3051844dad21628f6ea0c35`
+      `https://codecraft.ir/online-course/wp-json/wc/v3/products?consumer_key=ck_294b2788105f9c5336acf86b3e27f19eaeadb588&consumer_secret=cs_04576e92a5cba664e3051844dad21628f6ea0c35${query}`
     );
   //   const result = parsed.filter(x => x.id <= Params)
   let courses = [];

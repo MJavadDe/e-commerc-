@@ -39,7 +39,7 @@ const Courses = () => {
 export async function getServerSideProps() {
   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery(["Products", "per_page=11"], () =>
+  await queryClient.prefetchQuery(["Products", "per_page=3"], () =>
     fetchProducts("per_page=11")
   );
 
