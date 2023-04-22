@@ -12,6 +12,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import HeadBox from "./../Components/headBox/HeadBox";
 import axios from "axios";
+import { QueryClient, dehydrate } from "react-query";
 
 const Home = ({ data }) => {
   const router = useRouter();
