@@ -1,8 +1,9 @@
 import "@/styles/globals.css";
 import Layout from "./../Components/layout";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
+import { useState } from "react";
 export default function App({ Component, pageProps, ...appProps }) {
-  const [queryClient] = React.useState(() => new QueryClient())
+  const [queryClient] = useState(() => new QueryClient())
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
