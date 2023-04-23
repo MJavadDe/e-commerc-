@@ -53,10 +53,10 @@ const SingleCourse = () => {
 export async function getServerSideProps(context) {
   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery(
-    ["Products", `indlude=${context.query.course}`],
-    () => fetchProducts(`indlude=${context.query.course}`)
-  );
+  // await queryClient.prefetchQuery(
+  //   ["Products", `indlude=${context.query.course}`],
+  //   () => fetchProducts(`indlude=${context.query.course}`)
+  // );
 
   return {
     props: {
