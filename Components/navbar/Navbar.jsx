@@ -1,4 +1,4 @@
-import React, { useRef  } from "react";
+import React, { useEffect, useRef  } from "react";
 import Button from "@/Commons/buttons/Button";
 import Link from "next/link";
 import NavLink from "./NavLink";
@@ -18,8 +18,6 @@ import { useRouter } from "next/router";
 const Navbar = () => {
   
   const router = useRouter();
-  console.log(router);
-  console.log("router");
 
   function checkUrl ( NavLink) {
     for (NavLink ; ; ) {
@@ -30,21 +28,25 @@ const Navbar = () => {
   const ref = useRef();
   
   const refrence = useRef();
-  const homeElement = useRef();
   const handleClick = (event) => {
-    console.log(homeElement);
-    ref.current.style.width = `${event.target.offsetWidth}px`;
-    ref.current.style.left = `${event.target.offsetLeft}px`;
+    changeNavBorder(event.target)
+  
   };
 
 
   const handleHover = (event) => {  
-      ref.current.style.width = `${event.target.offsetWidth}px`;
-      ref.current.style.left = `${event.target.offsetLeft}px`;
-      console.log(event.target.offsetLeft);
+    changeNavBorder(event.target)
   };
+  const changeNavBorder = (el)=>{
+    ref.current.style.width = `${el.offsetWidth}px`;
+    ref.current.style.left = `${el.offsetLeft}px`;
+  }
 
+useEffect(()=>{
+  const currentNav = refrence.current.querySelector(`a[href="${router.pathname}"]`)
+  changeNavBorder(currentNav)
 
+},[])
 
 
   const handleSidebar = () => {
@@ -140,7 +142,7 @@ const Navbar = () => {
               />
             }
           />
-          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}  ref={homeElement} onClick={handleClick} children="خانه"url=""/>
+          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="خانه"url=""/>
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="دوره ها" url="courses" />
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="بلاگ" url="blog" />
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="تماس با ما" url="Contact" />
@@ -185,8 +187,6 @@ const Navbar = () => {
             <i>{<PersonIcon className="text-white" />}</i>
           </Button>
         </Link>
-        {refrence.current && console.log(refrence.current)}
-        {console.log("refrence")}
       </div>
     </div>
   );
