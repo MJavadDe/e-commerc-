@@ -5,19 +5,34 @@ import Layout from "@/layouts/layout";
 import AuthLayout from "@/layouts/authLayout/authLayout";
 import LoginForm from "@/Components/loginForm/loginForm";
 import Image from "next/image";
-import validation from './../../hooks/signIn/signin'
+import validation from './../../hooks/signIn/signin';
 
 const Login = ({ animation }) => {
   const [active, setActive] = useState(true);
+  const [serverResponse, setServerResponse] = useState(null)
+  const [isUser, setIsUser] = useState(null)
+  const router = useRouter()
   
-
+  const signInFunction = async (username,password) => {
+   validation(username,password)
+    setIsUser((await validation(username,password)))
+   console.log(isUser);
+   if(isUser){
+      // router.push("/dashbord")
+      setServerResponse(" ")
+      setServerResponse("با موفقیت وارد شدید")
+   }else{
+      setServerResponse(" ")
+      setServerResponse("اطلاعات صحیح نمی باشد")
+   }
+    
+  }
   useEffect(() => {
-    validation()
   }, [])
   
   return (
     <AuthLayout image="/images/login.png" active={active} setActive={setActive}>
-      <LoginForm />
+      <LoginForm signInFunction={signInFunction} ServerResponse={serverResponse} />
     </AuthLayout>
   );
 };

@@ -33,15 +33,15 @@ const Navbar = () => {
   const homeElement = useRef();
   const handleClick = (event) => {
     console.log(homeElement);
-
     ref.current.style.width = `${event.target.offsetWidth}px`;
     ref.current.style.left = `${event.target.offsetLeft}px`;
   };
 
 
-  const handleHover = (event) => {
-    ref.current.style.width = `${event.target.offsetWidth}px`;
-    ref.current.style.left = `${event.target.offsetLeft}px`;
+  const handleHover = (event) => {  
+      ref.current.style.width = `${event.target.offsetWidth}px`;
+      ref.current.style.left = `${event.target.offsetLeft}px`;
+      console.log(event.target.offsetLeft);
   };
 
 
@@ -136,18 +136,18 @@ const Navbar = () => {
                 children={
                   <Image src="/logo-1.png" width={40} height={40} alt="logo" />
                 }
-                className={""}
+                className={"logoSite"}
               />
             }
           />
-          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}  ref={homeElement} onClick={handleClick} children="خانه"url=""/>
-          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}   onClick={handleClick} children="دوره ها" url="courses" />
-          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}   onClick={handleClick} children="بلاگ" url="blog" />
-          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}   onClick={handleClick} children="تماس با ما" url="Contact" />
-          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}     onClick={handleClick} children="درباره ما" url="aboutUs" />
+          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}  ref={homeElement} onClick={handleClick} children="خانه"url=""/>
+          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="دوره ها" url="courses" />
+          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="بلاگ" url="blog" />
+          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="تماس با ما" url="Contact" />
+          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}     onClick={handleClick} children="درباره ما" url="aboutUs" />
           <div
             ref={ref}
-            className={`absolute transition-all w-20 bottom-0 border-primary border-b-2 left-${homeElement.current}px`}
+            className={`absolute transition-all w-6 bottom-0 left-[77.5%] border-primary border-b-2`}
           ></div>
         </div>
       </div>

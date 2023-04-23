@@ -7,12 +7,14 @@ export default function NavLink({
   children,
   className = "",
   onClick = () => {},
+  onMouseEnter
 }) {
   const router = useRouter();
   return (
     <Link href={`/${url} `}>
       <span
         onClick={onClick}
+        onMouseEnter={onMouseEnter}
         className={`${className} ${
           router.pathname == `/${url}` ? "active" : ""
         }`}
