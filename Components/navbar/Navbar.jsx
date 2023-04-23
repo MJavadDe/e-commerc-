@@ -137,18 +137,19 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div ref={refrence} onMouseLeave={handelOnMouseOutNavBar} className="relative hidden md:flex items-center gap-14 text-blue">
-          <NavLink
+        <NavLink
             url=""
             children={
               <Button
                 children={
                   <Image src="/logo-1.png" width={40} height={40} alt="logo" />
                 }
-                className={"logoSite"}
+                className={"logoSite ml-14"}
               />
             }
           />
+        <div ref={refrence} onMouseLeave={handelOnMouseOutNavBar} className="relative hidden md:flex items-center gap-14 text-blue">
+         
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="خانه"url=""/>
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="دوره ها" url="courses" />
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="بلاگ" url="blog" />
