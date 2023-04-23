@@ -11,7 +11,7 @@ export default function App({ Component, pageProps, ...appProps }) {
       <Hydrate state={pageProps.dehydratedState}>
         <Provider store={store}>
           <Layout
-            animation={pageProps.animation ? false : true}
+            animation={((pageProps.animation && pageProps.animation===false)||(pageProps.animation===false)) ? false : true}
             footer={pageProps.footer ? false : true}
           >
             <Component {...pageProps} />
