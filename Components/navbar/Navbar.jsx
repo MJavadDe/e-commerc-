@@ -28,12 +28,7 @@ const Navbar = () => {
 
   const refrence = useRef();
   const handleClick = (event) => {
-    const prevNav = refrence.current.querySelector(`a.active`);
-    if (prevNav) {
-      prevNav.classList.remove("active");
-    }
-    event.target.classList.add("active");
-    changeNavBorder(event.target);
+     changeNavBorder(event.target);
   };
 
   const handleHover = (event) => {
@@ -41,16 +36,15 @@ const Navbar = () => {
   };
 
   const handelOnMouseOutNavBar = () => {
-    const currentNav = refrence.current.querySelector(`a.active`);
+    const currentNav = refrence.current.querySelector(
+      `a[href="${router.pathname}"]`
+    );
     changeNavBorder(currentNav);
   };
   const changeNavBorder = (el) => {
-    if (el) {
-      ref.current.classList.remove('hidden')
+   if(el){
       ref.current.style.width = `${el.offsetWidth}px`;
       ref.current.style.left = `${el.offsetLeft}px`;
-    }else{
-      ref.current.classList.add('hidden')
     }
   };
 
@@ -58,13 +52,9 @@ const Navbar = () => {
     const currentNav = refrence.current.querySelector(
       `a[href="${router.pathname}"]`
     );
-    if (currentNav) {
-      currentNav.classList.add("active");
       changeNavBorder(currentNav);
-    }else{
-      ref.current.classList.add('hidden')
-    }
-  }, []);
+    
+  }, [router.pathname]);
 
   const handleSidebar = () => {
     if (document.querySelector("#sidebar").classList.contains("fixed")) {
