@@ -37,6 +37,11 @@ const Navbar = () => {
   const handleHover = (event) => {  
     changeNavBorder(event.target)
   };
+
+  const handelOnMouseOutNavBar = ()=>{
+    const currentNav = refrence.current.querySelector(`a[href="${router.pathname}"]`)
+  changeNavBorder(currentNav)
+  }
   const changeNavBorder = (el)=>{
     ref.current.style.width = `${el.offsetWidth}px`;
     ref.current.style.left = `${el.offsetLeft}px`;
@@ -130,7 +135,7 @@ useEffect(()=>{
             </div>
           </div>
         </div>
-        <div ref={refrence} className="relative hidden md:flex items-center gap-14 text-blue">
+        <div ref={refrence} onMouseLeave={handelOnMouseOutNavBar} className="relative hidden md:flex items-center gap-14 text-blue">
           <NavLink
             url=""
             children={
