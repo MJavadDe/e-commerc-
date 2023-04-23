@@ -60,6 +60,8 @@ const Navbar = () => {
     if (currentNav) {
       currentNav.classList.add("active");
       changeNavBorder(currentNav);
+    }else{
+      ref.current.classList.add('hidden')
     }
   }, []);
 
