@@ -23,7 +23,7 @@ const Login = ({ animation }) => {
       setServerResponse("با موفقیت وارد شدید")
    }else{
       setServerResponse(" ")
-      setServerResponse("اطلاعات صحیح نمی باشد")
+      setServerResponse("کاربری با این مشخصات وجود ندارد")
    }
     
   }
