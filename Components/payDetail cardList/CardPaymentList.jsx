@@ -5,13 +5,18 @@ import Button from "@/Commons/buttons/Button";
 import style from "./CardPaymentList.module.css";
 import PaymentCard from "../paymentCardList/PaymentCard";
 import PriceFormat from "@/utilitie/priceFormat";
+import { useSelector } from "react-redux";
 
-export default function CardPaymentList({ data }) {
+export default function CardPaymentList({ setCartStep }) {
   // const data = prop.paymentCardList
+  let product = useSelector((state) => state.products.cart);
   let totalPrice = 0;
-  data.map((item) => {
+  product.map((item) => {
     totalPrice += parseInt(item.price);
   });
+  const handleClick = ()=>{
+    setCartStep((e)=>e + 1)
+  }
   return (
     <div className=" rounded-md grid gap-3 p-[21px] border font-vazir bg-white">
       <div
@@ -20,7 +25,7 @@ export default function CardPaymentList({ data }) {
         جزئیات پرداخت
       </div>
       <div className="grid gap-[8px] my-[10px]">
-        {data.map((item, index) => {
+        {product.map((item, index) => {
           return (
             <Fragment key={index}>
               <PaymentCard item={item} />
@@ -42,6 +47,7 @@ export default function CardPaymentList({ data }) {
         className={
           "bg-primary-dark h-[50px] grid items-center text-white rounded-md hover:bg-primary-default cursor-pointer"
         }
+        onClick={handleClick}
       >
         تکمیل فرایند خرید
       </Button>

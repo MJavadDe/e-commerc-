@@ -11,7 +11,7 @@ import { addProduct } from "@/store/productSlice";
 const SingleCourse = () => {
   const dispatch = useDispatch();
   const bought = () => {
-    dispatch(addProduct({ item }));
+    dispatch(addProduct( {item} ));
   };
   const router = useRouter();
   const { data, isLoading, isFetching, isSuccess } = useProducts(
@@ -33,7 +33,7 @@ const SingleCourse = () => {
           </div>
           <div className="w-[60%]">
             <div className="relative h-1/2">
-              <Image src={item.images[0].src} layout="fill" />
+              <Image src={item.images[0].src} layout="fill" objectFit="cover" />
             </div>
             <div className="h-1/2 p-5">
               <div dangerouslySetInnerHTML={{ __html: item.description }} />
