@@ -1,4 +1,4 @@
-import React, { useEffect, useRef  } from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "@/Commons/buttons/Button";
 import Link from "next/link";
 import NavLink from "./NavLink";
@@ -16,43 +16,52 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 const Navbar = () => {
-  
   const router = useRouter();
 
-  function checkUrl ( NavLink) {
-    for (NavLink ; ; ) {
-      if (NavLink.url == "" ){ref.current.style.left =NavLink.offsetLeft && NavLink.offsetWidth };
+  function checkUrl(NavLink) {
+    for (NavLink; ; ) {
+      if (NavLink.url == "") {
+        ref.current.style.left = NavLink.offsetLeft && NavLink.offsetWidth;
+      }
     }
   }
 
   const ref = useRef();
-  
+
   const refrence = useRef();
   const handleClick = (event) => {
-    changeNavBorder(event.target)
-  
+    const prevNav = refrence.current.querySelector(`a.active`);
+    if (prevNav) {
+      prevNav.classList.remove("active");
+    }
+    event.target.classList.add("active");
+    changeNavBorder(event.target);
   };
 
-
-  const handleHover = (event) => {  
-    changeNavBorder(event.target)
+  const handleHover = (event) => {
+    changeNavBorder(event.target);
   };
 
-  const handelOnMouseOutNavBar = ()=>{
-    const currentNav = refrence.current.querySelector(`a[href="${router.pathname}"]`)
-  changeNavBorder(currentNav)
-  }
-  const changeNavBorder = (el)=>{
-    ref.current.style.width = `${el.offsetWidth}px`;
-    ref.current.style.left = `${el.offsetLeft}px`;
-  }
+  const handelOnMouseOutNavBar = () => {
+    const currentNav = refrence.current.querySelector(`a.active`);
+    changeNavBorder(currentNav);
+  };
+  const changeNavBorder = (el) => {
+    if (el) {
+      ref.current.style.width = `${el.offsetWidth}px`;
+      ref.current.style.left = `${el.offsetLeft}px`;
+    }
+  };
 
-useEffect(()=>{
-  const currentNav = refrence.current.querySelector(`a[href="${router.pathname}"]`)
-  changeNavBorder(currentNav)
-
-},[])
-
+  useEffect(() => {
+    const currentNav = refrence.current.querySelector(
+      `a[href="${router.pathname}"]`
+    );
+    if (currentNav) {
+      currentNav.classList.add("active");
+      changeNavBorder(currentNav);
+    }
+  }, []);
 
   const handleSidebar = () => {
     if (document.querySelector("#sidebar").classList.contains("fixed")) {
@@ -135,23 +144,57 @@ useEffect(()=>{
             </div>
           </div>
         </div>
-        <div ref={refrence} onMouseLeave={handelOnMouseOutNavBar} className="relative hidden md:flex items-center gap-14 text-blue">
+        <NavLink
+          url=""
+          children={
+            <Button
+              children={
+                <Image src="/logo-1.png" width={40} height={40} alt="logo" />
+              }
+              className={"logoSite ml-14"}
+            />
+          }
+        />
+        <div
+          ref={refrence}
+          onMouseLeave={handelOnMouseOutNavBar}
+          className="relative hidden md:flex items-center gap-14 text-blue"
+        >
           <NavLink
+            onMouseEnter={handleHover}
+            onMouseLeave={() => {}}
+            onClick={handleClick}
+            children="خانه"
             url=""
-            children={
-              <Button
-                children={
-                  <Image src="/logo-1.png" width={40} height={40} alt="logo" />
-                }
-                className={"logoSite"}
-              />
-            }
           />
-          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="خانه"url=""/>
-          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="دوره ها" url="courses" />
-          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="بلاگ" url="blog" />
-          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="تماس با ما" url="Contact" />
-          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}     onClick={handleClick} children="درباره ما" url="aboutUs" />
+          <NavLink
+            onMouseEnter={handleHover}
+            onMouseLeave={() => {}}
+            onClick={handleClick}
+            children="دوره ها"
+            url="courses"
+          />
+          <NavLink
+            onMouseEnter={handleHover}
+            onMouseLeave={() => {}}
+            onClick={handleClick}
+            children="بلاگ"
+            url="blog"
+          />
+          <NavLink
+            onMouseEnter={handleHover}
+            onMouseLeave={() => {}}
+            onClick={handleClick}
+            children="تماس با ما"
+            url="Contact"
+          />
+          <NavLink
+            onMouseEnter={handleHover}
+            onMouseLeave={() => {}}
+            onClick={handleClick}
+            children="درباره ما"
+            url="aboutUs"
+          />
           <div
             ref={ref}
             className={`absolute transition-all w-6 bottom-0 left-[77.5%] border-primary border-b-2`}
