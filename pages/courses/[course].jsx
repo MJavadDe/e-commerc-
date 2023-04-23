@@ -8,25 +8,24 @@ import { useProducts } from "@/hooks/services";
 import { useDispatch } from "react-redux";
 import { addProduct } from "@/store/productSlice";
 
-
 const SingleCourse = () => {
-  const dispatch = useDispatch()
-  const bought=()=>{
-    dispatch(addProduct({item}))
-  }
+  const dispatch = useDispatch();
+  const bought = () => {
+    dispatch(addProduct({ item }));
+  };
   const router = useRouter();
   const { data, isLoading, isFetching, isSuccess } = useProducts(
     "include=" + router.query.course
   );
-  let item = data && data[0]
-  
-// console.log(data);
+  const item = data && data[0];
+
+  // console.log(data);
   return (
     <>
-      {data && (
+      {item ? (
         <div className="flex justify-between w-full">
           <div className="flex flex-col w-[30%] gap-20">
-            <CourseInfo data={data[0]} bought={bought} />
+            <CourseInfo item={item} bought={bought} />
             <Button className="bg-primary-light rounded-md py-5 px-2 text-blue">
               سوالات خود را میتوانید در اینجا مطرح کنید
             </Button>
@@ -34,13 +33,15 @@ const SingleCourse = () => {
           </div>
           <div className="w-[60%]">
             <div className="relative h-1/2">
-              <Image src={data[0].images[0].src} layout="fill" />
+              <Image src={item.images[0].src} layout="fill" />
             </div>
             <div className="h-1/2 p-5">
-              <div dangerouslySetInnerHTML={{ __html: data[0].description }} />
+              <div dangerouslySetInnerHTML={{ __html: item.description }} />
             </div>
           </div>
         </div>
+      ) : (
+        <div>loading</div>
       )}
     </>
   );

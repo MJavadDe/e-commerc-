@@ -12,7 +12,7 @@ const CourseInfo = ({
   quantity = 6,
   level = "متوسط",
   language = "فارسی",
-  data,
+  item,
   bought
 }) => {
   // console.log(data);
@@ -27,7 +27,7 @@ const CourseInfo = ({
           قیمت این دوره &nbsp; :{" "}
         </span> &nbsp;{" "}
         <span className="text-[#46A194]">
-          <PriceFormat price={data.price} />
+          <PriceFormat price={item.price} />
         </span>
       </div>
       <div className="courseInfoBody flex flex-col gap-3 p-5">
@@ -37,7 +37,7 @@ const CourseInfo = ({
           </span>
           <span className="text-gray-500">
             مدرس دوره &nbsp; :{" "}
-            <span className="text-black">{data.teacher.name}</span>{" "}
+            <span className="text-black">{item.teacher.name}</span>{" "}
           </span>
         </div>
         <div className="InfoWrapper flex justify-start gap-3 mt-4">
@@ -47,7 +47,7 @@ const CourseInfo = ({
           <span className="text-gray-500">
             {" "}
             تعداد ویدیوها &nbsp; :{" "}
-            <span className="text-black">{quantity} ویدئو</span>{" "}
+            <span className="text-black"> ویدئو</span>{" "}
           </span>
         </div>
         <div className="InfoWrapper flex justify-start gap-3 mt-4">
@@ -57,7 +57,7 @@ const CourseInfo = ({
           <span className="text-gray-500">
             {" "}
             مدت زمان دوره &nbsp; :{" "}
-            <span className="text-primary-dark">{data.durationCourse}</span>{" "}
+            <span className="text-primary-dark">{item.durationCourse}</span>{" "}
           </span>
         </div>
         <div className="InfoWrapper flex justify-start gap-3 mt-4">
@@ -66,7 +66,7 @@ const CourseInfo = ({
           </span>
           <span className="text-gray-500">
             {" "}
-            سطح دوره &nbsp; : <span className="text-black">{level}</span>{" "}
+            سطح دوره &nbsp; : <span className="text-black"></span>{" "}
           </span>
         </div>
         <div className="InfoWrapper flex justify-start gap-3 mt-4">
@@ -76,7 +76,6 @@ const CourseInfo = ({
           <span className="text-gray-500">
             {" "}
             زبان دوره &nbsp; : <span className="text-black">
-              {language}
             </span>{" "}
           </span>
         </div>
