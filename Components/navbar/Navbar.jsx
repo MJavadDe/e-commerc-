@@ -48,8 +48,11 @@ const Navbar = () => {
   };
   const changeNavBorder = (el) => {
     if (el) {
+      ref.current.classList.remove('hidden')
       ref.current.style.width = `${el.offsetWidth}px`;
       ref.current.style.left = `${el.offsetLeft}px`;
+    }else{
+      ref.current.classList.add('hidden')
     }
   };
 
