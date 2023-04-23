@@ -5,19 +5,28 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useProducts } from "@/hooks/services";
+import { useDispatch } from "react-redux";
+import { addProduct } from "@/store/productSlice";
+
 
 const SingleCourse = () => {
+  const dispatch = useDispatch()
+  const bought=()=>{
+    dispatch(addProduct({item}))
+  }
   const router = useRouter();
   const { data, isLoading, isFetching, isSuccess } = useProducts(
     "include=" + router.query.course
   );
+  let item = data && data[0]
+  
 // console.log(data);
   return (
     <>
       {data && (
         <div className="flex justify-between w-full">
           <div className="flex flex-col w-[30%] gap-20">
-            <CourseInfo data={data[0]} />
+            <CourseInfo data={data[0]} bought={bought} />
             <Button className="bg-primary-light rounded-md py-5 px-2 text-blue">
               سوالات خود را میتوانید در اینجا مطرح کنید
             </Button>

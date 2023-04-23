@@ -3,6 +3,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import Image from "next/image";
 import PriceFormat from "@/utilitie/priceFormat";
+import Link from "next/link";
 // import Axs from ""
 
 function Cardcourse({ data }) {
@@ -10,7 +11,7 @@ function Cardcourse({ data }) {
   
   return (
     <>
-      <a href={`/courses/${data.id}`}>
+      <Link href={`/courses/${data.id}`}>
         <div
           dir="rtl"
           className="font-vazir flex flex-col gap-2 shadow-md h-full justify-between rounded-md overflow-hidden"
@@ -43,7 +44,7 @@ function Cardcourse({ data }) {
             </span>
           </div>
         </div>
-      </a>
+      </Link>
     </>
   );
 }
