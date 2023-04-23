@@ -1,14 +1,20 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "@/layouts/layout";
 import AuthLayout from "@/layouts/authLayout/authLayout";
 import LoginForm from "@/Components/loginForm/loginForm";
 import Image from "next/image";
+import validation from './../../hooks/signIn/signin'
 
 const Login = ({ animation }) => {
   const [active, setActive] = useState(true);
+  
 
+  useEffect(() => {
+    validation()
+  }, [])
+  
   return (
     <AuthLayout image="/images/login.png" active={active} setActive={setActive}>
       <LoginForm />

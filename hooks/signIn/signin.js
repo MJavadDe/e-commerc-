@@ -11,10 +11,11 @@ const validation = async (username = "admin",password = "100Coders@") => {
             'Content-Type': 'application/json'
         }
     }).then(res =>{
-        document.cookie = JSON.stringify({token : res.data.data.token , displayName : res.data.data.displayName })
-        console.log(JSON.parse(document.cookie));
-    } )
-    .catch(error => console.log(error))
+        const time = new Date().getTime()
+        const expieringDate = new Date((time + 604800000))
+        document.cookie = `token = ${res.data.data.token} ; expires = ${expieringDate}`
+        document.cookie = `displayName = ${res.data.data.displayName} ; expires = ${expieringDate}`
+    } ).catch(error => console.log(error))
 
 
 
