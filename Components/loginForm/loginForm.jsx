@@ -5,18 +5,19 @@ import { useRouter } from 'next/router'
 const LoginForm = ({signInFunction,ServerResponse}) => {
       const emailInput = useRef(null)
       const passwordInput = useRef(null)
-      const [Email, setEmail] = useState()
-      const [Password, setPassword] = useState()
+      // const [Email, setEmail] = useState()
+      // const [Password, setPassword] = useState()
       
       const router = useRouter()
       const handleForgetpass = ()=>{
         router.push('/auth/forgetpass')
       }
       const signInTrigger = (e) =>{
-        setEmail(e.target.previousElementSibling.previousElementSibling.previousElementSibling.value)
-        setPassword(e.target.previousElementSibling.previousElementSibling.value)
-        signInFunction(Email,Password)
-        console.log(e.target.previousElementSibling.previousElementSibling.value);
+        // setEmail((prev) => { e.target.previousElementSibling.previousElementSibling.previousElementSibling.value = prev})
+        // setPassword(e.target.previousElementSibling.previousElementSibling.value)
+        const email = e.target.previousElementSibling.previousElementSibling.previousElementSibling.value;
+        const pass = e.target.previousElementSibling.previousElementSibling.value
+        signInFunction(email,pass)
       }
       useEffect(() => {
       }, [])

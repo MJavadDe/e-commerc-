@@ -10,15 +10,15 @@ import validation from './../../hooks/signIn/signin';
 const Login = ({ animation }) => {
   const [active, setActive] = useState(true);
   const [serverResponse, setServerResponse] = useState(null)
-  const [isUser, setIsUser] = useState(null)
   const router = useRouter()
   
   const signInFunction = async (username,password) => {
-   validation(username,password)
-    setIsUser((await validation(username,password)))
+    console.log(password,username);
+    console.log( await validation(username,password));
+    let isUser = await validation(username,password);
    console.log(isUser);
    if(isUser){
-      // router.push("/dashbord")
+      router.push("/dashbord")
       setServerResponse(" ")
       setServerResponse("با موفقیت وارد شدید")
    }else{
@@ -27,9 +27,6 @@ const Login = ({ animation }) => {
    }
     
   }
-  useEffect(() => {
-  }, [])
-  
   return (
     <AuthLayout image="/images/login.png" active={active} setActive={setActive}>
       <LoginForm signInFunction={signInFunction} ServerResponse={serverResponse} />
