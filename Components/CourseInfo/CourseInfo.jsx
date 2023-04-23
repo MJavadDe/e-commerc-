@@ -7,13 +7,18 @@ import LayersIcon from "@mui/icons-material/Layers";
 import TranslateIcon from "@mui/icons-material/Translate";
 import Button from "@/Commons/buttons/Button";
 
+
 const CourseInfo = ({
   quantity = 6,
   level = "متوسط",
   language = "فارسی",
   data,
+  bought
 }) => {
-  console.log(data);
+  // console.log(data);
+  const handleClick = ()=>{
+    bought()
+  }
   return (
     <div className="rounded-xl flex flex-col p-5 shadow-2xl font-vazir">
       <div className=" text-xl border-b-2 border-gray-200 p-5 flex ">
@@ -80,6 +85,7 @@ const CourseInfo = ({
         className={
           "bg-[#46A194] text-center w-11/12 p-3 rounded-lg m-auto mb-2 mt-4 cursor-pointer text-white"
         }
+        onClick={handleClick}
       >
         ثبت نام در این دوره
       </Button>
