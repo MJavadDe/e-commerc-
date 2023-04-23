@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { useProducts } from "@/hooks/services";
 import { useDispatch } from "react-redux";
 import { addProduct } from "@/store/productSlice";
+import { QueryClient, dehydrate } from "react-query";
 
 const SingleCourse = () => {
   const dispatch = useDispatch();
@@ -15,10 +16,12 @@ const SingleCourse = () => {
   };
   const router = useRouter();
   const { data, isLoading, isFetching, isSuccess } = useProducts(
-    "include=" + router.query.course
+    `include=${router.query.course}`
   );
-  const item = data && data[0];
-
+  let item =false
+  if (isSuccess) {
+     item = data && data[0];
+  }
   // console.log(data);
   return (
     <>
@@ -47,4 +50,18 @@ const SingleCourse = () => {
   );
 };
 
+export async function getServerSideProps(context) {
+  const queryClient = new QueryClient();
+
+  await queryClient.prefetchQuery(
+    ["Products", `indlude=${context.query.course}`],
+    () => fetchProducts(`indlude=${context.query.course}`)
+  );
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
+}
 export default SingleCourse;
