@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef  } from "react";
 import Button from "@/Commons/buttons/Button";
 import Link from "next/link";
 import NavLink from "./NavLink";
@@ -13,21 +13,45 @@ import "public/shopping-bag.png";
 import "public/logo-1.png";
 import "public/profile.png";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
-  const ref = useRef();
+  
+  const router = useRouter();
+  console.log(router);
+  console.log("router");
 
+  function checkUrl ( NavLink) {
+    for (NavLink ; ; ) {
+      if (NavLink.url == "" ){ref.current.style.left =NavLink.offsetLeft && NavLink.offsetWidth };
+    }
+  }
+
+  const ref = useRef();
+  
+  const refrence = useRef();
+  const homeElement = useRef();
   const handleClick = (event) => {
+    console.log(homeElement);
+
     ref.current.style.width = `${event.target.offsetWidth}px`;
     ref.current.style.left = `${event.target.offsetLeft}px`;
   };
 
+
+  const handleHover = (event) => {
+    ref.current.style.width = `${event.target.offsetWidth}px`;
+    ref.current.style.left = `${event.target.offsetLeft}px`;
+  };
+
+
+
+
   const handleSidebar = () => {
-    if(document.querySelector("#sidebar").classList.contains("fixed")){
-      document.querySelector("#sidebar").classList.replace("fixed","hidden");
-    }
-    else{
-      document.querySelector("#sidebar").classList.replace("hidden","fixed");
+    if (document.querySelector("#sidebar").classList.contains("fixed")) {
+      document.querySelector("#sidebar").classList.replace("fixed", "hidden");
+    } else {
+      document.querySelector("#sidebar").classList.replace("hidden", "fixed");
     }
   };
 
@@ -41,7 +65,10 @@ const Navbar = () => {
               onClick={handleSidebar}
             />
           }
-          <div className="hidden top-0 right-0 w-[350px] bg-white rounded-l-md h-screen z-50 transition-all" id="sidebar">
+          <div
+            className="hidden top-0 right-0 w-[350px] bg-white rounded-l-md h-screen z-50 transition-all"
+            id="sidebar"
+          >
             <div className="flex justify-between items-center px-[20px] py-[12.5px] bg-secondary-very-light rounded-tl-md">
               <NavLink
                 url=""
@@ -71,7 +98,9 @@ const Navbar = () => {
             <div className="px-[12px] py-[16px]">
               <div className="bg-secondary-very-light rounded-md px-[10px] py-[8px]">
                 <div className="flex justify-center items-center gap-[29px]">
-                  <div className="rounded-full"><img src="/profile.png" alt="profileimg"/></div>
+                  <div className="rounded-full">
+                    <img src="/profile.png" alt="profileimg" />
+                  </div>
                   <span className="text-center">مریم مهاجر </span>
                 </div>
                 <Search
@@ -81,25 +110,25 @@ const Navbar = () => {
               </div>
               <div className="bg-secondary-very-light rounded-md mt-[16px] px-[12.5px] pt-[23px] pb-[15px] grid grid-flow-row gap-[5px]">
                 <div className="px-[21px] py-[10px] rounded-md text-white bg-primary-dark">
-                  <NavLink children="خانه" url=""/>
+                  <NavLink children="خانه" url="" />
                 </div>
                 <div className="px-[21px] py-[10px] rounded-md text-secondary-light hover:bg-primary-light transition-all">
                   <NavLink children="دوره ها" url="courses" />
                 </div>
                 <div className="px-[21px] py-[10px] rounded-md text-secondary-light hover:bg-primary-light transition-all">
-                  <NavLink children="بلاگ" url="blog"/>
+                  <NavLink children="بلاگ" url="blog" />
                 </div>
                 <div className="px-[21px] py-[10px] rounded-md text-secondary-light hover:bg-primary-light transition-all">
-                  <NavLink children="تماس با ما" url="Contact"/>
+                  <NavLink children="تماس با ما" url="Contact" />
                 </div>
                 <div className="px-[21px] py-[10px] rounded-md text-secondary-light hover:bg-primary-light transition-all">
-                  <NavLink children="درباره ما" url="aboutUs"/>
+                  <NavLink children="درباره ما" url="aboutUs" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="relative hidden md:flex items-center gap-14 text-blue">
+        <div ref={refrence} className="relative hidden md:flex items-center gap-14 text-blue">
           <NavLink
             url=""
             children={
@@ -111,14 +140,14 @@ const Navbar = () => {
               />
             }
           />
-          <NavLink onClick={handleClick} children="خانه" url="" />
-          <NavLink onClick={handleClick} children="دوره ها" url="courses" />
-          <NavLink onClick={handleClick} children="بلاگ" url="blog" />
-          <NavLink onClick={handleClick} children="تماس با ما" url="Contact" />
-          <NavLink onClick={handleClick} children="درباره ما" url="aboutUs" />
+          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}  ref={homeElement} onClick={handleClick} children="خانه"url=""/>
+          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}   onClick={handleClick} children="دوره ها" url="courses" />
+          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}   onClick={handleClick} children="بلاگ" url="blog" />
+          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}   onClick={handleClick} children="تماس با ما" url="Contact" />
+          <NavLink   onMouseEnter={()=> handleHover()} onMouseLeave={()=>{}}     onClick={handleClick} children="درباره ما" url="aboutUs" />
           <div
             ref={ref}
-            className="absolute transition-all w-20 bottom-0 border-primary border-b-2"
+            className={`absolute transition-all w-20 bottom-0 border-primary border-b-2 left-${homeElement.current}px`}
           ></div>
         </div>
       </div>
@@ -135,6 +164,7 @@ const Navbar = () => {
           }
         />
       </div>
+
       <div className="flex gap-2 bg- items-center">
         <Link href="/cart" className="hidden md:block">
           <Button
@@ -155,6 +185,8 @@ const Navbar = () => {
             <i>{<PersonIcon className="text-white" />}</i>
           </Button>
         </Link>
+        {refrence.current && console.log(refrence.current)}
+        {console.log("refrence")}
       </div>
     </div>
   );

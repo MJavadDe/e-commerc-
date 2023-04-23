@@ -23,7 +23,7 @@ const Courses = () => {
             />
           </div>
           <div className="flex items-center">
-            <span>مرتب 1سازی بر اساس قیمت</span>
+            <span>مرتب سازی بر اساس قیمت</span>
             <KeyboardArrowDownIcon />
           </div>
         </div>
