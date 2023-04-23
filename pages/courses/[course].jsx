@@ -18,6 +18,8 @@ const SingleCourse = () => {
   const { data, isLoading, isFetching, isSuccess } = useProducts(
     "include=" + router.query.course
   );
+  let item = data && data[0]
+  
 // console.log(data);
   return (
     <>
