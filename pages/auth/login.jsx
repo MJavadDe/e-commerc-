@@ -13,10 +13,7 @@ const Login = ({ animation }) => {
   const router = useRouter()
   
   const signInFunction = async (username,password) => {
-    console.log(password,username);
-    console.log( await validation(username,password));
     let isUser = await validation(username,password);
-   console.log(isUser);
    if(isUser){
       router.push("/dashbord")
       setServerResponse(" ")
