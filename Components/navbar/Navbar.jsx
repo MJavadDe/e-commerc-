@@ -19,11 +19,7 @@ const Navbar = () => {
   
   const router = useRouter();
 
-  function checkUrl ( NavLink) {
-    for (NavLink ; ; ) {
-      if (NavLink.url == "" ){ref.current.style.left =NavLink.offsetLeft && NavLink.offsetWidth };
-    }
-  }
+  
 
   const ref = useRef();
   
@@ -135,8 +131,8 @@ useEffect(()=>{
             </div>
           </div>
         </div>
-        <div ref={refrence} onMouseLeave={handelOnMouseOutNavBar} className="relative hidden md:flex items-center gap-14 text-blue">
-          <NavLink
+        <div className="ml-10">
+        <NavLink
             url=""
             children={
               <Button
@@ -147,11 +143,14 @@ useEffect(()=>{
               />
             }
           />
+        </div>
+        <div ref={refrence} onMouseLeave={handelOnMouseOutNavBar} className="relative hidden md:flex items-center gap-14 text-blue">
+          
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="خانه"url=""/>
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="دوره ها" url="courses" />
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="بلاگ" url="blog" />
           <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="تماس با ما" url="Contact" />
-          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}     onClick={handleClick} children="درباره ما" url="aboutUs" />
+          <NavLink   onMouseEnter={handleHover} onMouseLeave={()=>{}}   onClick={handleClick} children="درباره ما" url="aboutUs" />
           <div
             ref={ref}
             className={`absolute transition-all w-6 bottom-0 left-[77.5%] border-primary border-b-2`}
