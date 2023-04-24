@@ -18,13 +18,13 @@ import { useRouter } from "next/router";
 const Navbar = () => {
   const router = useRouter();
 
-  function checkUrl(NavLink) {
-    for (NavLink; ; ) {
-      if (NavLink.url == "") {
-        ref.current.style.left = NavLink.offsetLeft && NavLink.offsetWidth;
-      }
-    }
-  }
+  // function checkUrl(NavLink) {
+  //   for (NavLink; ; ) {
+  //     if (NavLink.url == "") {
+  //       ref.current.style.left = NavLink.offsetLeft && NavLink.offsetWidth;
+  //     }
+  //   }
+  // }
 
   const ref = useRef();
 
