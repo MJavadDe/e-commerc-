@@ -4,33 +4,33 @@ import Layout from "@/layouts/layout";
 import CardPaymentList from "@/Components/payDetail cardList/CardPaymentList";
 import CartLayout from "@/layouts/CartLayout";
 import React, { useState } from "react";
+import CheckoutCart from "@/Components/checkoutInformationCart/checkoutCart";
+import SuccessOrder from "@/Components/SuccessOrder/SuccessOrder";
 
 function index(props) {
   // cart step is 1(cart) or 2(payment Detail) or 3(checkout)
   const [cartStep, setCartStep] = useState(1);
-  const listItem = [
-    {
-      id: 1,
-      name: "دوره ریکت جی اس پیش رفته صفر تا صد",
-      instructor: "استاد احسان مولایی",
-      price: "250000",
-      img: "/images/html.jpg",
-    },
-    {
-      id: 2,
-      name: "دوره ریکت جی اس پیش رفته صفر تا صد",
-      instructor: "استاد احسان مولایی",
-      price: "350000",
-      img: "/images/react.jpg",
-    },
-  ];
+
   return (
     <>
       <CartLayout cartStep={cartStep}>
-        <div className="flex flex-col lg:flex-row justify-between bg-secondary-very-light rounded-lg gap-8 p-8">
-          <ListCartItem className="lg:w-2/3" data={listItem} />
-          <CardPaymentList className="lg:w-1/3" data={listItem} />
-        </div>
+        {cartStep === 1 && (
+          <div className="flex flex-col lg:flex-row justify-between bg-secondary-very-light rounded-lg gap-8 p-8">
+            <ListCartItem className="lg:w-2/3" />
+            <CardPaymentList setCartStep={setCartStep} className="lg:w-1/3" />
+          </div>
+        )}
+        {cartStep === 2 && (
+          <div className="flex flex-col lg:flex-row justify-between bg-secondary-very-light rounded-lg gap-8 p-8">
+            <CheckoutCart />
+            <CardPaymentList setCartStep={setCartStep} className="lg:w-1/3" />
+          </div>
+        )}
+        {cartStep === 3 && (
+          <div className=" bg-secondary-very-light rounded-lg p-8">
+            <SuccessOrder />
+          </div>
+        )}
       </CartLayout>
     </>
   );
