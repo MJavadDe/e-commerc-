@@ -1,14 +1,14 @@
 import React from "react";
 
-const Input = ({ type, placeholder, className,ref }) => {
+const Input = ({ type, placeholder, className, ref }) => {
   return (
-     <input
-        ref={ref}
-        dir="rtl"
-        className={`font-vazir rounded bg-transparent placeholder:text-primary shadow-md px-2 py-1 outline-none text-blue h-[50px] ${className}`}
-        type={type}
-        placeholder={placeholder}
-      />
+    <input
+      ref={ref}
+      dir="rtl"
+      className={`font-vazir rounded bg-white placeholder:text-primary shadow-md px-2 py-1 outline-none text-blue h-[50px] ${className}`}
+      type={type}
+      placeholder={placeholder}
+    />
   );
 };
 

@@ -65,7 +65,7 @@ const Home = ({ data }) => {
             buttonTitle="مشاهده همه مقالات"
             className="text-secondary"
           />
-          <ArticleCardList />
+          <ArticleCardList per_page={6} router={router}/>
         </div>
 
         {/* Teachers Section Start */}

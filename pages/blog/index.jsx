@@ -1,12 +1,15 @@
-import Layout from "@/layouts/layout";
-import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/router"; 
 import ArticleCardList from "@/Components/articleCardList/ArticleCardList";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Searchbox from "@/Components/searchbox/searchbox";
 import Paginations from "@/Components/pagination/Pagination";
 
-const Blog = ({ x }) => {
+import { QueryClient, dehydrate } from "react-query";
+
+
+const Blog = () => {
+  const router = useRouter();
   return (
     <>
       <div className=" flex flex-col font-vazir">
@@ -23,13 +26,22 @@ const Blog = ({ x }) => {
           </div>
         </div>
 
-        <ArticleCardList />
+        <ArticleCardList router ={router} per_page={6} />
         <div className="mt-5">
-          <Paginations />
+          <Paginations total={13} />
         </div>
       </div>
     </>
   );
 };
+export async function getServerSideProps() {
+  const queryClient = new QueryClient();
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
+}
 
 export default Blog;

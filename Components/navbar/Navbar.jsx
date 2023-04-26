@@ -152,7 +152,7 @@ const Navbar = () => {
         <div
           ref={refrence}
           onMouseLeave={handelOnMouseOutNavBar}
-          className="relative hidden md:flex items-center gap-14 text-blue"
+          className="relative hidden md:flex items-center gap-10 lg:gap-14 text-blue"
         >
           <NavLink
             onMouseEnter={handleHover}
