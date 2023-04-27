@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
 
-<<<<<<< Updated upstream
 const Input = ({ type, placeholder, className, ref }) => {
-=======
-const Input = ({ type, placeholder, className , ref }) => {
->>>>>>> Stashed changes
   return (
     <input
       ref={ref}
