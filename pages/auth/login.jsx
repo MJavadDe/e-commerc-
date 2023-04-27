@@ -11,19 +11,22 @@ const Login = ({ animation }) => {
   const [active, setActive] = useState(true);
   const [serverResponse, setServerResponse] = useState(null)
   const router = useRouter()
-  
-  const signInFunction = async (username,password) => {
-    let isUser = await validation(username,password);
-   if(isUser){
-      router.push("/dashbord")
-      setServerResponse(" ")
-      setServerResponse("با موفقیت وارد شدید")
-   }else{
-      setServerResponse(" ")
-      setServerResponse("کاربری با این مشخصات وجود ندارد")
-   }
-    
-  }
+
+    const signInFunction = async (username,password) => {
+      setServerResponse(<span>لطفا منتظر بمانید</span>)
+      let isUser = await validation(username,password);
+      console.log(isUser);
+      if(isUser){
+        router.push("/dashbord")
+        setServerResponse(" ")
+        setServerResponse(<span className="text-green-800">با موفقیت وارد شدید</span>)
+      }else{
+        setServerResponse(" ")
+        setServerResponse(<span className="text-red-600">کاربری با این مشخصات وجود ندارد</span>)
+      }
+      
+    }
+   
   return (
     <AuthLayout image="/images/login.png" active={active} setActive={setActive}>
       <LoginForm signInFunction={signInFunction} ServerResponse={serverResponse} />
