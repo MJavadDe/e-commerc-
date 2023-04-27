@@ -15,7 +15,7 @@ export default function ArticleCard({ prop }) {
           src={prop.images ? prop.images : "/blogdefault.png"}
           width={300}
           height={200}
-          className="w-full"
+          className="w-full h-[300px]"
           alt="article"
         />
       </div>
