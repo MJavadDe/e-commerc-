@@ -3,6 +3,7 @@ import SshareArticle from "@/Components/shareArticleComponent/SshareArticle";
 import { useRouter } from "next/router";
 import { usePosts } from "@/hooks/services/usePosts";
 import { QueryClient, dehydrate } from "react-query";
+import { Skeleton } from "antd";
 
 import React from "react";
 
@@ -15,8 +16,15 @@ const SingleMag = () => {
   if (isSuccess) {
     item = data && data[0];
   }
-
-  return (
+  if (isLoading) return (<div className="w-full">
+<Skeleton
+    avatar
+    paragraph={{
+      rows: 20,
+    }}
+  />
+  </div>);
+ if(!isLoading) return (
     <>
       <ArticleContent prop={item} />
       <SshareArticle />

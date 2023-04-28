@@ -8,6 +8,7 @@ import { useProducts } from "@/hooks/services";
 import { useDispatch } from "react-redux";
 import { addProduct } from "@/store/productSlice";
 import { QueryClient, dehydrate } from "react-query";
+import { Skeleton } from "antd";
 
 const SingleCourse = () => {
   const dispatch = useDispatch();
@@ -44,7 +45,14 @@ const SingleCourse = () => {
           </div>
         </div>
       ) : (
-        <div>loading</div>
+        <div>
+          <Skeleton
+    avatar
+    paragraph={{
+      rows: 20,
+    }}
+  />
+        </div>
       )}
     </>
   );

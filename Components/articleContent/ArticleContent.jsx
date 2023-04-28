@@ -3,12 +3,12 @@ import React from "react";
 
 export default function ArticleContent({prop}) {
   return (
-    <div className="font-vazir">
+    <div className="font-vazir flex flex-col ">
       <Image
         src={prop.images ? prop.images : "/blogdefault.png"}
         width={300}
         height={200}
-        className="w-full"
+        className="w-1/3 self-center"
         alt="single-blog-img"
       />
       <div className="mt-[39px] mb-[62px] text-center font-semibold text-blue">
